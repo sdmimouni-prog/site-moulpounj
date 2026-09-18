@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Dialogs from '../components/Dialogs.astro';
+import Icon from '../components/Icon.astro';
+import '../styles/about.css';
+const gallery=[7,14,21,28,35,42];
+const values=[{icon:'seal-check',title:'La qualité',text:'Des produits pensés pour votre confort.'},{icon:'armchair',title:'Le choix',text:'Matelas, banquettes et literie pour votre intérieur.'},{icon:'tag',title:'Les prix d’usine',text:'Un circuit direct pour rendre le confort accessible.'}];
+---
+<Layout title="À propos de Moul Pounj | Notre réseau et notre mission" description="Découvrez Moul Pounj, son réseau de 40 magasins au Maroc et son engagement pour une literie confortable et accessible.">
+<Header/>
+<main id="contenu" class="about-page">
+<nav class="about-shell about-breadcrumb" aria-label="Fil d’Ariane"><a href="/">Accueil</a><span>/</span><span aria-current="page">À propos</span></nav>
+<section class="about-shell about-hero">
+<div class="about-intro"><span class="about-eyebrow">À PROPOS DE MOUL POUNJ</span><h1>Le confort, <em>proche de vous.</em></h1><p>Un réseau marocain de matelas et de literie qui associe qualité, choix et accessibilité.</p><a class="button" href="/matelas">Découvrir nos matelas <Icon name="arrow-right"/></a><div class="about-number"><strong>40</strong><span>magasins<br/>au Maroc</span></div></div>
+<img src="/images/about/photo-1.jpg" alt="Façade d’un magasin Moul Pounj avec ses matelas exposés" width="1199" height="1237" fetchpriority="high"/>
+</section>
+<section class="about-shell about-mission"><span class="about-eyebrow">NOTRE MISSION</span><h2>Le confort au quotidien,<br/>accessible à chacun.</h2><p>Notre mission : accompagner chaque Marocain vers un sommeil de qualité, avec des produits confortables à prix d’usine.</p><div class="about-values">{values.map(v=><article><Icon name={v.icon}/><h3>{v.title}</h3><p>{v.text}</p></article>)}</div></section>
+<section class="about-shell about-network"><div><span class="about-eyebrow">NOTRE RÉSEAU</span><h2>Des magasins pour se rencontrer.</h2><p>Nos équipes vous accueillent en magasin pour découvrir les produits et vous conseiller selon vos besoins.</p></div><a class="button button-outline" href="/nos-magasins">Trouver un magasin <Icon name="map-pin"/></a><div class="about-gallery">{gallery.map((n,i)=><img src={`/images/about/photo-${n}.jpg`} alt={`Photo du réseau Moul Pounj — ${i+1}`} width="1600" height="1200" loading="lazy"/>)}</div></section>
+<section class="about-shell about-factory"><img src="/images/about/photo-49.jpg" alt="Visuel Moul Pounj issu de la présentation de la marque" width="1200" height="675" loading="lazy"/><div><span class="about-eyebrow">NOTRE SAVOIR-FAIRE</span><h2>De la fabrication à votre intérieur.</h2><p>Nous fabriquons nos matelas et banquettes dans nos usines et suivons les étapes de production. Ce circuit direct limite les intermédiaires et permet de maîtriser les coûts et la qualité.</p><a href="/salon-marocain">Découvrir nos banquettes <Icon name="arrow-right"/></a></div></section>
+<section class="about-shell about-cta"><div><h2>Votre prochain moment de confort.</h2><p>Explorez nos produits et les offres disponibles.</p></div><a class="button" href="/offres">Voir les offres <Icon name="arrow-right"/></a></section>
+</main><Footer showBanner={false}/><Dialogs/>
+</Layout>

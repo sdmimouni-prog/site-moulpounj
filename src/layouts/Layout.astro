@@ -1,0 +1,43 @@
+---
+import '@fontsource/nunito-sans/400.css';
+import '@fontsource/nunito-sans/600.css';
+import '@fontsource/nunito-sans/700.css';
+import '@fontsource/nunito-sans/800.css';
+import '@fontsource/noto-sans-arabic/400.css';
+import '@fontsource/noto-sans-arabic/600.css';
+import '@fontsource/noto-sans-arabic/700.css';
+import '@fontsource/noto-sans-arabic/800.css';
+import '@phosphor-icons/web/regular';
+import '../styles/global.css';
+import '../styles/hero.css';
+import '../styles/navigation.css';
+import '../styles/card-motion.css';
+const {
+  canonical = undefined,
+  language = 'fr',
+  title = 'Moul Pounj — الراحة لي كتستاهل',
+  description = 'Découvrez l’univers Moul Pounj : matelas, salons marocains et oreillers. Aperçu local.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#de5625" />
+    <title>{title}</title>
+  </head>
+  <body id="accueil">
+    <slot />
+    <script>
+      if (document.querySelector('#service-dialog')) {
+        void import('../lib/client');
+        void import('../lib/card-motion');
+      }
+    </script>
+  </body>
+</html>

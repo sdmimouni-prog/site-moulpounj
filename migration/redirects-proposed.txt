@@ -1,0 +1,3 @@
+# Proposition uniquement — ne pas copier en production avant validation hébergeur
+/matelas-en-mousse/ /matelas?technologie=mousse 301
+/matelas-a-ressorts-ensaches/ /matelas?technologie=ressorts 301

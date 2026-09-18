@@ -1,0 +1,108 @@
+---
+import { site } from '../data/site';
+import { reviewPreviews } from '../data/reviews';
+import Icon from './Icon.astro';
+import '../styles/reviews.css';
+---
+
+<section
+  id="avis"
+  class="container section customer-stories"
+  aria-labelledby="reviews-title"
+>
+  <div class="section-heading centered">
+    <h2 id="reviews-title" lang="ar" dir="rtl">
+      {site.headings.reviews}
+    </h2>
+    <p lang="ar" dir="rtl">
+      تجربتكم كتهمنا… وثقتكم عزيزة علينا
+    </p>
+  </div>
+  <div
+    class="stories-grid stories-slider"
+    id="reviews-track"
+    tabindex="0"
+    role="region"
+    aria-roledescription="carrousel"
+    aria-label="Témoignages — utilisez les flèches ou faites glisser"
+  >
+    {reviewPreviews.map((review, index) => (
+      <div class="story-entrance" style={`--story-delay:${index * 130}ms`}>
+        <article
+          class="story-card"
+          aria-label={`Emplacement témoignage ${review.id}`}
+        >
+          <div class="story-top">
+            <div class="story-portrait">
+              <img
+                src={review.portrait}
+                alt="Portrait illustratif extrait de la maquette"
+                width="160"
+                height="160"
+                loading="lazy"
+              />
+            </div>
+            <div class="story-identity">
+              <h3>{review.title}</h3>
+              <p>
+                <Icon name="map-pin" />
+                {review.location}
+              </p>
+              <div class="story-rating" aria-label="Aucune note publiée">
+                <span aria-hidden="true">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <span style={`--star-index:${i}`}>
+                      <Icon name="star" />
+                    </span>
+                  ))}
+                </span>
+                <small>Note non renseignée</small>
+              </div>
+            </div>
+          </div>
+          <div class="story-quote">
+            <span class="story-quote-mark" aria-hidden="true">
+              “
+            </span>
+            <p lang="ar" dir="rtl">
+              {review.copy}
+            </p>
+          </div>
+          <p class="story-preview">{review.note}</p>
+        </article>
+      </div>
+    ))}
+  </div>
+  <div class="stories-controls" aria-label="Commandes des témoignages">
+    <button
+      class="icon-button"
+      data-story-prev
+      aria-label="Témoignages précédents"
+      aria-controls="reviews-track"
+    >
+      <Icon name="caret-left" />
+    </button>
+    <span data-story-position aria-live="off">
+      1–3 / 5
+    </span>
+    <button
+      class="icon-button"
+      data-story-next
+      aria-label="Témoignages suivants"
+      aria-controls="reviews-track"
+    >
+      <Icon name="caret-right" />
+    </button>
+    <button
+      class="icon-button"
+      data-story-pause
+      aria-label="Mettre les témoignages en pause"
+      aria-pressed="false"
+    >
+      <Icon name="pause" />
+    </button>
+  </div>
+</section>
+<script>
+  import '../lib/reviews';
+</script>

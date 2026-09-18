@@ -1,0 +1,17 @@
+---
+import { premium35 as p } from '../../data/premium35';
+import Icon from '../Icon.astro';
+---
+
+<section class="product-shell product-section">
+  <h2 class="product-section-title">علاش تختار هاد المرتبة ؟</h2>
+  <div class="product-why-grid">
+    {p.why.map((item) => (
+      <article class="product-small-card">
+        <Icon name={item.icon} />
+        <h3>{item.title}</h3>
+        <p>{item.text}</p>
+      </article>
+    ))}
+  </div>
+</section>

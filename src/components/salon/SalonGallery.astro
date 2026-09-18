@@ -1,0 +1,55 @@
+---
+import { salon } from '../../data/salon';
+import Icon from '../Icon.astro';
+---
+
+<section class="salon-section container" aria-labelledby="inspiration-title">
+  <h2 class="salon-title" id="inspiration-title">
+    أفكار لصالونك
+  </h2>
+  <p class="salon-subtitle">
+    صور أجواء للإلهام، ماشي صور زبناء ولا محتوى العرض
+  </p>
+  <div class="salon-gallery-shell">
+    <div
+      class="salon-gallery"
+      tabindex="0"
+      role="region"
+      aria-label="صور الإلهام، استعمل الأسهم أو السحب"
+    >
+      {salon.inspirations.map((item, i) => (
+        <figure>
+          <img
+            src={item.src}
+            alt={item.alt}
+            width="700"
+            height="450"
+            loading="lazy"
+          />
+          <figcaption>
+            أجواء الصالون المغربي · <bdi>{i + 1}</bdi>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+    <div class="salon-gallery-controls">
+      <button
+        class="icon-button"
+        data-gallery-direction="-1"
+        aria-label="الصورة السابقة"
+      >
+        <Icon name="caret-right" />
+      </button>
+      <span data-gallery-position aria-live="polite">
+        1 / {salon.inspirations.length}
+      </span>
+      <button
+        class="icon-button"
+        data-gallery-direction="1"
+        aria-label="الصورة التالية"
+      >
+        <Icon name="caret-left" />
+      </button>
+    </div>
+  </div>
+</section>

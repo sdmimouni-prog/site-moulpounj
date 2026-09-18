@@ -1,0 +1,1591 @@
+[
+  {
+    "id": 18848,
+    "slug": "ellipse",
+    "name": "Matelas SUBLIMYA Ellipse",
+    "category": "matelas",
+    "categorySource": [
+      {
+        "id": 424,
+        "name": "Matelas à ressorts ensachés",
+        "slug": "matelas-a-ressorts-ensaches",
+        "link": "https://moulpounj.ma/matelas-a-ressorts-ensaches/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/ellipse/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": null,
+    "shortDescription": "🛏️ Hybrid: Mousse HR + Ressorts ensachés\n💯 Ressorts Ensaché Night+\n🛡️ Epaisseur de 30 cm\n✅ 35 Ans Garantie",
+    "characteristics": {},
+    "technology": "ressorts",
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 1990,
+    "images": [
+      {
+        "src": "/images/catalogue/ee0c3333c7b2929e.png",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2025/12/2-2.png",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      },
+      {
+        "src": "/images/catalogue/a4c9edf830a7d299.png",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2025/11/SUBLIMYA-Ellipse-2.png",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      }
+    ],
+    "variants": [
+      {
+        "id": 18849,
+        "dimension": "90 × 190",
+        "priceMAD": 1990,
+        "regularPriceMAD": 2490,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 18850,
+        "dimension": "140 × 190",
+        "priceMAD": 2690,
+        "regularPriceMAD": 3190,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 18851,
+        "dimension": "160 × 190",
+        "priceMAD": 3190,
+        "regularPriceMAD": 3690,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 18852,
+        "dimension": "160 × 200",
+        "priceMAD": 3490,
+        "regularPriceMAD": 3990,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 18853,
+        "dimension": "180 × 200",
+        "priceMAD": 3990,
+        "regularPriceMAD": 4490,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "long_description",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 17988,
+    "slug": "ellipse-topper",
+    "name": "Matelas SUBLIMYA Ellipse topper",
+    "category": "matelas",
+    "categorySource": [
+      {
+        "id": 424,
+        "name": "Matelas à ressorts ensachés",
+        "slug": "matelas-a-ressorts-ensaches",
+        "link": "https://moulpounj.ma/matelas-a-ressorts-ensaches/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/ellipse-topper/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": null,
+    "shortDescription": "🛏️ Hybrid: Mousse HR + Ressorts ensachés\n💯 Ressorts Ensaché Night+\n🛡️ Epaisseur de 34cm\n✅ 35 Ans Garantie",
+    "characteristics": {},
+    "technology": "ressorts",
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 2450,
+    "images": [
+      {
+        "src": "/images/catalogue/7582da9dbfa49056.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2026/03/Untitled-1-4-copy.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      },
+      {
+        "src": "/images/catalogue/6358c0bad241511a.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2025/11/img.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/903b8a3c8b7336a4.png",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2025/11/SUBLIMYA-Ellipse-1.png",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/a4c9edf830a7d299.png",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2025/11/SUBLIMYA-Ellipse-2.png",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      }
+    ],
+    "variants": [
+      {
+        "id": 17989,
+        "dimension": "90 × 190",
+        "priceMAD": 2450,
+        "regularPriceMAD": 3450,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 17990,
+        "dimension": "140 × 190",
+        "priceMAD": 3490,
+        "regularPriceMAD": 4490,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 17991,
+        "dimension": "160 × 190",
+        "priceMAD": 3990,
+        "regularPriceMAD": 4990,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 17992,
+        "dimension": "160 × 200",
+        "priceMAD": 4250,
+        "regularPriceMAD": 5199,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 17993,
+        "dimension": "180 × 200",
+        "priceMAD": 4990,
+        "regularPriceMAD": 5990,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "long_description",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 12346,
+    "slug": "oreiller-sublimya-visco",
+    "name": "Oreiller Sublimya Visco",
+    "category": "oreillers",
+    "categorySource": [
+      {
+        "id": 394,
+        "name": "Oreiller",
+        "slug": "oreiller",
+        "link": "https://moulpounj.ma/oreiller/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/oreiller-sublimya-visco/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": "Le confort sur-mesure pour vos nuits.\nRedécouvrez le vrai sommeil avec l’oreiller ergonomique Sublimya Visco®, conçu pour épouser parfaitement les courbes de votre tête, nuque et épaules. Grâce à sa mousse à mémoire de forme haute densité et son tissu respirant enrichi en bambou, il assure un soutien optimal et une régulation naturelle de la température toute la nuit.\n✅ Soulage les douleurs cervicales : Fini les réveils avec des tensions ! Son design orthopédique aligne votre colonne vertébrale et réduit les points de pression.\n✅ S’adapte à toutes les positions : Dormez sur le dos, le côté ou le ventre : Sublimya® Visco s’adapte à vous, pas l’inverse.\n✅ Hygiène et fraîcheur garanties : Housse déhoussable et lavable. Tissu hypoallergénique et antibactérien pour un sommeil sain, nuit après nuit.\n✅ Fabriqué avec soin : Matériaux premium, finitions élégantes et durabilité assurée. Conçu pour durer — et pour bien dormir.\n🎁 Livraison offerte partout au Maroc\n🛒 Commandez maintenant et transformez vos nuits avec Sublimya® Visco",
+    "shortDescription": "✅ Testé & approuvé par +10.000 dormeurs\n🌙 Soutien cervical ergonomique\n🛏️ Mousse mémoire de forme haute densité\n💨 Tissu respirant & thermorégulateur\n💯 Compatible toutes positions de sommeil",
+    "characteristics": {},
+    "technology": null,
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 250.0,
+    "images": [
+      {
+        "src": "/images/catalogue/2a195164d15bcefe.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2025/03/Oreiller-Sublimya-visco.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      }
+    ],
+    "variants": [],
+    "missing": [
+      "sku",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 5387,
+    "slug": "ponge-33-abs",
+    "name": "Banquette SUBLIMYA 33 ABS",
+    "category": "salon",
+    "categorySource": [
+      {
+        "id": 303,
+        "name": "Salon Marocain",
+        "slug": "salon-marocain",
+        "link": "https://moulpounj.ma/salon-marocain/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/ponge-33-abs/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": "Banquette 33 ABS – Mousse Haute Densité pour Confort Durable\nOffrez à vos clients un confort supérieur avec notre Banquette 33 ABS, conçue en mousse haute densité (33 kg/m³) pour un soutien optimal et une durabilité exceptionnelle.\nRésistante et ferme, elle est idéale pour les canapés, banquettes, salons, sièges de voiture, ou banquettes de salle d’attente. Sa structure rigide assure un excellent maintien dans le temps, même en cas d’usage intensif.\nCaractéristiques principales :\nDensité : 33 kg/m³ (ABS)\nDimensions personnalisables selon vos besoins\nIdéale pour : salons, banquettes, sièges, équipements pro\nDurabilité supérieure – ne s’affaisse pas rapidement\nConfort ferme – parfait pour une assise prolongée\nFabrication 100% marocaine\nSoutenez l’industrie locale avec un produit fabriqué au Maroc, livré rapidement dans toutes les régions.\nBesoin d’un devis sur mesure ou de grandes quantités ?\nContactez-nous directement via WhatsApp ou téléphone — nous répondons en moins de 30 minutes.",
+    "shortDescription": null,
+    "characteristics": {},
+    "technology": null,
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 450,
+    "images": [
+      {
+        "src": "/images/catalogue/a5c4afd8185bed18.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Untitled-2-1-1-2.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      }
+    ],
+    "variants": [
+      {
+        "id": 16148,
+        "dimension": "65 × 28",
+        "priceMAD": 450,
+        "regularPriceMAD": 550,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16149,
+        "dimension": "65 × 30",
+        "priceMAD": 465,
+        "regularPriceMAD": 565,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16150,
+        "dimension": "70 × 28",
+        "priceMAD": 480,
+        "regularPriceMAD": 580,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16151,
+        "dimension": "70 × 30",
+        "priceMAD": 500,
+        "regularPriceMAD": 600,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16152,
+        "dimension": "75 × 28",
+        "priceMAD": 530,
+        "regularPriceMAD": 630,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16153,
+        "dimension": "75 × 30",
+        "priceMAD": 575,
+        "regularPriceMAD": 675,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16154,
+        "dimension": "80 × 28",
+        "priceMAD": 550,
+        "regularPriceMAD": 650,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16155,
+        "dimension": "80 × 30",
+        "priceMAD": 575,
+        "regularPriceMAD": 675,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 5366,
+    "slug": "banquette-sublimya-touch-33-abs",
+    "name": "Banquette SUBLIMYA TOUCH 33/ABS",
+    "category": "salon",
+    "categorySource": [
+      {
+        "id": 303,
+        "name": "Salon Marocain",
+        "slug": "salon-marocain",
+        "link": "https://moulpounj.ma/salon-marocain/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/banquette-sublimya-touch-33-abs/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": null,
+    "shortDescription": "Une banquette 100% en mousse de haute densité HD33 / ABS vous offre un confort ferme et résistant pour usage quotidien, le choix parfait pour vos chambres de séjour traditionnels et modernes.\nTOUCH 33 vous offre un confort ferme, avec sa technologie de la mousse moderne, et sa forme élégante, harmonieuse et son design moderne adapté à tous les besoins.\nTissu : tissu strech matelassé piqué\nComposition : Mousse de haute densité HD33 / ABS\nConfort : ferme\nForme disponible : arrondie\nBesoin : Salon traditionnel, moderne et séjour\nGarantie : 25 ANS",
+    "characteristics": {},
+    "technology": null,
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 415,
+    "images": [
+      {
+        "src": "/images/catalogue/8a9a3e3b8da5f3fb.webp",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Untitled-design-_6_.webp",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      }
+    ],
+    "variants": [
+      {
+        "id": 16124,
+        "dimension": "65 × 28",
+        "priceMAD": 415,
+        "regularPriceMAD": 515,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16125,
+        "dimension": "65 × 30",
+        "priceMAD": 430,
+        "regularPriceMAD": 530,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16126,
+        "dimension": "70 × 28",
+        "priceMAD": 430,
+        "regularPriceMAD": 530,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16127,
+        "dimension": "70 × 30",
+        "priceMAD": 450,
+        "regularPriceMAD": 550,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16128,
+        "dimension": "75 × 28",
+        "priceMAD": 500,
+        "regularPriceMAD": 600,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16129,
+        "dimension": "75 × 30",
+        "priceMAD": 525,
+        "regularPriceMAD": 625,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16130,
+        "dimension": "80 × 28",
+        "priceMAD": 540,
+        "regularPriceMAD": 640,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16131,
+        "dimension": "80 × 30",
+        "priceMAD": 560,
+        "regularPriceMAD": 660,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "long_description",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 5365,
+    "slug": "banquette-sublimya-premium-35",
+    "name": "Banquette SUBLIMYA PREMIUM 35",
+    "category": "salon",
+    "categorySource": [
+      {
+        "id": 303,
+        "name": "Salon Marocain",
+        "slug": "salon-marocain",
+        "link": "https://moulpounj.ma/salon-marocain/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/banquette-sublimya-premium-35/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": null,
+    "shortDescription": "🛏️ Confort Mi-Ferme\n💯 Mousse de haute densité HD33 /HR/ABS\n🛡️ Tissu Antiacariens\n✅ 35 Ans Garantie",
+    "characteristics": {},
+    "technology": null,
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 515,
+    "images": [
+      {
+        "src": "/images/catalogue/b1fc9da8c0802736.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Banquette-SUBLIMYA-PREMIUM-35-1.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      },
+      {
+        "src": "/images/catalogue/8648776ead80d63c.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Banquette-SUBLIMYA-PREMIUM-35-2.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/48e62e1febab340c.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Image3.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/8e1ab6234ef8d0c9.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/461165640_3864190760490222_1835082778091793167_n-1-488x650-2.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      }
+    ],
+    "variants": [
+      {
+        "id": 16132,
+        "dimension": "65 × 28",
+        "priceMAD": 515,
+        "regularPriceMAD": 615,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16133,
+        "dimension": "65 × 30",
+        "priceMAD": 530,
+        "regularPriceMAD": 630,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16134,
+        "dimension": "70 × 28",
+        "priceMAD": 530,
+        "regularPriceMAD": 630,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16135,
+        "dimension": "70 × 30",
+        "priceMAD": 550,
+        "regularPriceMAD": 650,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16136,
+        "dimension": "75 × 28",
+        "priceMAD": 605,
+        "regularPriceMAD": 705,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16137,
+        "dimension": "75 × 30",
+        "priceMAD": 680,
+        "regularPriceMAD": 780,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16138,
+        "dimension": "80 × 28",
+        "priceMAD": 655,
+        "regularPriceMAD": 755,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16139,
+        "dimension": "80 × 30",
+        "priceMAD": 690,
+        "regularPriceMAD": 790,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "long_description",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 5358,
+    "slug": "matelas-relief-hr",
+    "name": "Matelas Relief HR",
+    "category": "matelas",
+    "categorySource": [
+      {
+        "id": 300,
+        "name": "Matelas en mousse",
+        "slug": "matelas-en-mousse",
+        "link": "https://moulpounj.ma/matelas-en-mousse/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/matelas-relief-hr/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": "Matelas 100% mousse haute résilience de la marque RELIEF, offre aux personnes souffrant de maux de dos, un soutien moyen et un accueil dynamique grâce à la mousse haute résilience au confort moyennement ferme et un excellent maintien du dos et de la colonne vertébrale.\nMatelas en mousse HR, conçu avec tissu stretch blanc matelassé et hypoallergénique et respirant pour compenser la surchauffe.\nLe meilleur matelas de notre gamme en haute densité, ultra doux et confortable.\nTissu :  tissu stretch blanc matelassé et hypoallergénique\nConfort :  mi- ferme\nHauteur : 30 cm\n4 Poignées en tissu\nRecommandation médicale\nGarantie :  35 ANS",
+    "shortDescription": "🛏️ Confort Mi-Ferme\n💯 Mousse Durable\n🛡️ Tissu Antiacariens\n✅ 35 Ans Garantie",
+    "characteristics": {},
+    "technology": "mousse",
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 2300,
+    "images": [
+      {
+        "src": "/images/catalogue/4a191bd6ba7c3257.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/RELIEF-HR.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      }
+    ],
+    "variants": [
+      {
+        "id": 5359,
+        "dimension": "90 × 190",
+        "priceMAD": 2300,
+        "regularPriceMAD": 2875,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5360,
+        "dimension": "140 × 190",
+        "priceMAD": 3300,
+        "regularPriceMAD": 4125,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5361,
+        "dimension": "160 × 190",
+        "priceMAD": 3690,
+        "regularPriceMAD": 4650,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5362,
+        "dimension": "160 × 200",
+        "priceMAD": 3800,
+        "regularPriceMAD": 4750,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5363,
+        "dimension": "180 × 200",
+        "priceMAD": 4200,
+        "regularPriceMAD": 5250,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5364,
+        "dimension": "200 × 200",
+        "priceMAD": 4600,
+        "regularPriceMAD": 5750,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 5351,
+    "slug": "matelas-relief-35",
+    "name": "Matelas Relief 35",
+    "category": "matelas",
+    "categorySource": [
+      {
+        "id": 300,
+        "name": "Matelas en mousse",
+        "slug": "matelas-en-mousse",
+        "link": "https://moulpounj.ma/matelas-en-mousse/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/matelas-relief-35/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": "Matelas 100% mousse HD35 de marque RELIEF avec tissu extensible matelassé hypoallergénique blanc\nConfort semi-doux, très bon maintien du corps pour retrouver sa vitalité.\nTissu :  tissu stretch blanc matelassé et hypoallergénique\nConfort :  mi- ferme / mi-souple\nHauteur : 30 cm\n4 Poignées en tissu\nRecommandation médicale\nGarantie :  30 ANS",
+    "shortDescription": "🛏️ Confort Mi-Ferme / mi-souple\n💯 Mousse Durable\n🛡️ Tissu Antiacariens\n✅ 30 Ans Garantie",
+    "characteristics": {
+      "Confort": "Mi-ferme, Mi-souple"
+    },
+    "technology": "mousse",
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 1900,
+    "images": [
+      {
+        "src": "/images/catalogue/dd539537113aca7b.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/RELIEF-35.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      }
+    ],
+    "variants": [
+      {
+        "id": 5352,
+        "dimension": "90 × 190",
+        "priceMAD": 1900,
+        "regularPriceMAD": 2375,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5353,
+        "dimension": "140 × 190",
+        "priceMAD": 2900,
+        "regularPriceMAD": 3625,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5354,
+        "dimension": "160 × 190",
+        "priceMAD": 3290,
+        "regularPriceMAD": 4112.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5355,
+        "dimension": "160 × 200",
+        "priceMAD": 3390,
+        "regularPriceMAD": 4237.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5356,
+        "dimension": "180 × 200",
+        "priceMAD": 3800,
+        "regularPriceMAD": 4750,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5357,
+        "dimension": "200 × 200",
+        "priceMAD": 4200,
+        "regularPriceMAD": 5250,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 5344,
+    "slug": "matelas-premium-35",
+    "name": "Matelas Premium 35",
+    "category": "matelas",
+    "categorySource": [
+      {
+        "id": 300,
+        "name": "Matelas en mousse",
+        "slug": "matelas-en-mousse",
+        "link": "https://moulpounj.ma/matelas-en-mousse/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/matelas-premium-35/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": "MATELAS SUBLIMYA PREMIUM 35\n“Le Matelas Premium 35 de Moul Pounj a transformé mon sommeil. C’est vraiment la solution idéale pour un sommeil réparateur. Je me réveille sans douleurs et je le recommande à tous !” Ahmed N. – Client vérifié\nMatelas haut de gamme, conçu pour les personnes actives. Le matelas premium 35 vous aide à recharger votre énergie grâce à un sommeil réparateur qui vous assure à la fois la douceur et le soutien dorsal, grâce à ses composants qui répondent aux normes médicales. Composé à 100% de couches de mousse HD33/HR/ABS,  Sublimya premium  35 vous offre une densité équilibrée pour un maintien optimal, un confort mi-ferme et mi-souple exceptionnel et une très bonne qualité de sommeil.\nPourquoi Choisir le Matelas Premium 35 ?\nMatelas en mousse HD35 et HR durable et résistant pour une utilisation à long terme de la marque SUBLIMYA 35 Il reste le meilleur rapport qualité prix sur le marché\nTissu :  tissu stretch matelassé avec un Traitement antiacariens et antiallergique.\nConfort : mi-ferme\nHauteur : 30 cm\n4 Poignées en tissu\nAlèse : premium lavable facilement et de bonne qualité qui protège parfaitement le matelas\nRecommandation médicale\nGarantie :  35 ANS",
+    "shortDescription": "🏆 Élu meilleur matelas par plus de 20.000 clients\n🛏️ Confort Mi-Ferme\n💯 Mousse Durable\n🛡️ Tissu Antiacariens\n✅ 35 Ans Garantie",
+    "characteristics": {
+      "Confort": "Mi-ferme",
+      "Garantie": "35 Ans",
+      "Marque": "Sublimya",
+      "Technologie": "Mousse",
+      "Traitement": "Anti-acariens, Antibactérien"
+    },
+    "technology": "mousse",
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 1490,
+    "images": [
+      {
+        "src": "/images/catalogue/f4fbb09d8fe2c126.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/1-3.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      },
+      {
+        "src": "/images/catalogue/e049449c8f323947.jpeg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Mattress_cross-section_with_202604092210-1.jpeg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/ea23236221b5f936.jpeg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Mattress_cutaway_with_202604092213-1.jpeg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/336f8c489e23c4df.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Untitled-2-2-1.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/0a5e44f11686fd42.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Matress-Layers-2.jpg",
+        "role": "description",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/067b41897ebd5faf.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Matress-Layers-2-300x139.jpg",
+        "role": "description",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      }
+    ],
+    "variants": [
+      {
+        "id": 5345,
+        "dimension": "90 × 190",
+        "priceMAD": 1490,
+        "regularPriceMAD": 1837.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5346,
+        "dimension": "140 × 190",
+        "priceMAD": 1990,
+        "regularPriceMAD": 2487.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5347,
+        "dimension": "160 × 190",
+        "priceMAD": 2490,
+        "regularPriceMAD": 3087.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5348,
+        "dimension": "160 × 200",
+        "priceMAD": 2640,
+        "regularPriceMAD": 3312.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5349,
+        "dimension": "180 × 200",
+        "priceMAD": 2900,
+        "regularPriceMAD": 3637.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5350,
+        "dimension": "200 × 200",
+        "priceMAD": 3200,
+        "regularPriceMAD": 3937.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 5323,
+    "slug": "matelas-etudiant",
+    "name": "Matelas étudiant",
+    "category": "matelas",
+    "categorySource": [
+      {
+        "id": 423,
+        "name": "Autres",
+        "slug": "autres",
+        "link": "https://moulpounj.ma/autres/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/matelas-etudiant/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": "Grâce à une combinaison mousse 100 % HD / 33/HR/ABS il garantit un excellent ajustement et un maintien dynamique. Développé pour les jeunes et moins jeunes à la recherche d’un confort accessible.\nTissu jacquard matelassé avec un Traitement antiacariens et antiallergique.\nConfort : mi- ferme\nHauteur : 15 cm\nGarantie : 10 ANS",
+    "shortDescription": null,
+    "characteristics": {},
+    "technology": null,
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 590,
+    "images": [
+      {
+        "src": "/images/catalogue/277e637944b5f489.png",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/etudiant__3_-removebg-preview.png",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      }
+    ],
+    "variants": [
+      {
+        "id": 5325,
+        "dimension": "90 × 190",
+        "priceMAD": 590,
+        "regularPriceMAD": 737.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5324,
+        "dimension": "140 × 190",
+        "priceMAD": 890,
+        "regularPriceMAD": 1112.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 5297,
+    "slug": "full-hr",
+    "name": "Banquette SUBLIMYA Full HR",
+    "category": "salon",
+    "categorySource": [
+      {
+        "id": 303,
+        "name": "Salon Marocain",
+        "slug": "salon-marocain",
+        "link": "https://moulpounj.ma/salon-marocain/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/full-hr/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": null,
+    "shortDescription": null,
+    "characteristics": {},
+    "technology": null,
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 550,
+    "images": [
+      {
+        "src": "/images/catalogue/a4a3ff96645e5e38.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/full-hr.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      }
+    ],
+    "variants": [
+      {
+        "id": 16140,
+        "dimension": "65 × 28",
+        "priceMAD": 550,
+        "regularPriceMAD": 650,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16141,
+        "dimension": "65 × 30",
+        "priceMAD": 575,
+        "regularPriceMAD": 675,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16142,
+        "dimension": "70 × 28",
+        "priceMAD": 595,
+        "regularPriceMAD": 695,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16143,
+        "dimension": "70 × 30",
+        "priceMAD": 620,
+        "regularPriceMAD": 720,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16144,
+        "dimension": "75 × 28",
+        "priceMAD": 655,
+        "regularPriceMAD": 755,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16145,
+        "dimension": "75 × 30",
+        "priceMAD": 720,
+        "regularPriceMAD": 820,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16146,
+        "dimension": "80 × 28",
+        "priceMAD": 710,
+        "regularPriceMAD": 810,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 16147,
+        "dimension": "80 × 30",
+        "priceMAD": 749,
+        "regularPriceMAD": 859,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "long_description",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 5255,
+    "slug": "matelas-relief-33-abs",
+    "name": "Matelas Relief 33/ABS",
+    "category": "matelas",
+    "categorySource": [
+      {
+        "id": 300,
+        "name": "Matelas en mousse",
+        "slug": "matelas-en-mousse",
+        "link": "https://moulpounj.ma/matelas-en-mousse/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/matelas-relief-33-abs/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": "Matelas 100% en mousse HD33 de la marque RELIEF avec un tissu stretch blanc matelassé et hypoallergénique, très confortable et soulage les points de pressions de votre corps, avec un confort mi-ferme et un très bon maintien dorsal.\nTissu :  tissu stretch blanc matelassé et hypoallergénique\nConfort :  mi- ferme\nHauteur : 30 cm\n4 Poignées en tissu\nRecommandation médicale\nGarantie :  25 ANS",
+    "shortDescription": "🛏️ Confort Mi-Ferme\n💯 Mousse Durable\n🛡️ Tissu Antiacariens\n✅ 25 Ans Garantie",
+    "characteristics": {},
+    "technology": "mousse",
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 1600,
+    "images": [
+      {
+        "src": "/images/catalogue/04f2efdaccbd94eb.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Untitled-1-2.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      },
+      {
+        "src": "/images/catalogue/25619800905cac6c.png",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Untitled-design-2.png",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      }
+    ],
+    "variants": [
+      {
+        "id": 5256,
+        "dimension": "90 × 190",
+        "priceMAD": 1600,
+        "regularPriceMAD": 2000,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5257,
+        "dimension": "140 × 190",
+        "priceMAD": 2290,
+        "regularPriceMAD": 2862.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5258,
+        "dimension": "160 × 190",
+        "priceMAD": 2700,
+        "regularPriceMAD": 3375,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5259,
+        "dimension": "160 × 200",
+        "priceMAD": 2800,
+        "regularPriceMAD": 3500,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5260,
+        "dimension": "180 × 200",
+        "priceMAD": 3050,
+        "regularPriceMAD": 3812.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5261,
+        "dimension": "200 × 200",
+        "priceMAD": 3400,
+        "regularPriceMAD": 4250,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 5244,
+    "slug": "matelas-full-hr",
+    "name": "Matelas Full HR",
+    "category": "matelas",
+    "categorySource": [
+      {
+        "id": 300,
+        "name": "Matelas en mousse",
+        "slug": "matelas-en-mousse",
+        "link": "https://moulpounj.ma/matelas-en-mousse/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/matelas-full-hr/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": "Le matelas FULL HR vous offre un confort mi-souple supérieur exceptionnel et inégalé, conçu spécialement pour les personnes ayant des problèmes de dos.\nTissu :  tissu stretch matelassé avec un Traitement antiacariens et antiallergique.\nConfort : mi-souple\nHauteur : 30 cm\n4 Poignées en tissu\nAlèse : premium lavable lavable et de bonne qualité\nRecommandation médicale\nGarantie :  45 ANS",
+    "shortDescription": "🛏️ Confort Mi-souple\n💯 Mousse Durable\n🛡️ Tissu Antiacariens\n✅ 45 Ans Garantie",
+    "characteristics": {},
+    "technology": "mousse",
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 1590,
+    "images": [
+      {
+        "src": "/images/catalogue/59084e420045f110.png",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/1-1.png",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      },
+      {
+        "src": "/images/catalogue/e0da05c722a5bf10.jpeg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Hand_pressing_mattress_202604040349-1.jpeg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/74e703a7cd182e6c.jpeg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Moroccan_bedroom_with_202604040346-1.jpeg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/697712dccac11b14.jpg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Untitled-2-1.jpg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      }
+    ],
+    "variants": [
+      {
+        "id": 5245,
+        "dimension": "90 × 190",
+        "priceMAD": 1590,
+        "regularPriceMAD": 1962.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5250,
+        "dimension": "140 × 190",
+        "priceMAD": 2190,
+        "regularPriceMAD": 2712.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5251,
+        "dimension": "160 × 190",
+        "priceMAD": 2690,
+        "regularPriceMAD": 3437.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5252,
+        "dimension": "160 × 200",
+        "priceMAD": 2840,
+        "regularPriceMAD": 3562.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5253,
+        "dimension": "180 × 200",
+        "priceMAD": 3300,
+        "regularPriceMAD": 4050,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5254,
+        "dimension": "200 × 200",
+        "priceMAD": 3500,
+        "regularPriceMAD": 4325,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  },
+  {
+    "id": 5230,
+    "slug": "matelas-touch-33-abs",
+    "name": "Matelas Touch 33 ABS",
+    "category": "matelas",
+    "categorySource": [
+      {
+        "id": 300,
+        "name": "Matelas en mousse",
+        "slug": "matelas-en-mousse",
+        "link": "https://moulpounj.ma/matelas-en-mousse/"
+      }
+    ],
+    "sourceUrl": "https://moulpounj.ma/produit/matelas-touch-33-abs/",
+    "observedAt": "2026-09-17T23:56:06.202902+00:00",
+    "status": "public_source_snapshot",
+    "description": "Matelas en mousse TOUCH HD33 de la marque SUBLIMYA, il vous offre un confort ferme pour vous assurer un soutien excellent de votre corps.\nTissu :  tissu stretch matelassé avec un Traitement anti acariens et antiallergique.\nConfort : ferme\nHauteur : 30 cm\n4 Poignées en tissu\nAlèse : facilement lavable et de bonne qualité qui protège parfaitement le matelas\nRecommandation médicale\nGarantie :  25 ANS",
+    "shortDescription": "🛏️ Confort Ferme\n💯 Mousse Durable\n🛡️ Tissu Antiacariens\n✅ 25 Ans Garantie",
+    "characteristics": {},
+    "technology": "mousse",
+    "heightCm": null,
+    "sku": null,
+    "stockQuantity": null,
+    "inStock": true,
+    "priceMAD": 1390,
+    "images": [
+      {
+        "src": "/images/catalogue/bd54c80bdd657e76.png",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/1-2.png",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "family_consistent"
+      },
+      {
+        "src": "/images/catalogue/397793a4c50bf545.jpeg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Mattress_side_panel_202604040342-1-1.jpeg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/dd056ea639f51592.jpeg",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/Mattress_in_minimalist_202604040343-1.jpeg",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      },
+      {
+        "src": "/images/catalogue/011a6696e831d7bc.png",
+        "source_url": "https://moulpounj.ma/wp-content/uploads/2024/08/3.png",
+        "role": "gallery",
+        "association": "source_product_id",
+        "visual_review": "not_independently_verified"
+      }
+    ],
+    "variants": [
+      {
+        "id": 5231,
+        "dimension": "90 × 190",
+        "priceMAD": 1390,
+        "regularPriceMAD": 1612.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5232,
+        "dimension": "140 × 190",
+        "priceMAD": 1850,
+        "regularPriceMAD": 2312.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5233,
+        "dimension": "160 × 190",
+        "priceMAD": 2190,
+        "regularPriceMAD": 2612.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5234,
+        "dimension": "160 × 200",
+        "priceMAD": 2350,
+        "regularPriceMAD": 2750,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5235,
+        "dimension": "180 × 200",
+        "priceMAD": 2600,
+        "regularPriceMAD": 3262.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 5236,
+        "dimension": "200 × 200",
+        "priceMAD": 2800,
+        "regularPriceMAD": 3462.5,
+        "inStock": true,
+        "purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "missing": [
+      "sku",
+      "weight",
+      "exact_stock_quantity",
+      "height_cm_structured"
+    ],
+    "reviewNotes": [
+      "Commercial claims preserved as source text, not independently certified."
+    ]
+  }
+]

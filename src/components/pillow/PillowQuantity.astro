@@ -1,0 +1,28 @@
+---
+interface Props {
+  suffix: string;
+}
+const { suffix } = Astro.props;
+---
+
+<div class="pillow-quantity" dir="ltr">
+  <button type="button" data-pillow-minus aria-label="Diminuer la quantité">
+    −
+  </button>
+  <label class="sr-only" for={`pillow-quantity-${suffix}`}>
+    Quantité
+  </label>
+  <input
+    id={`pillow-quantity-${suffix}`}
+    data-pillow-quantity
+    type="number"
+    inputmode="numeric"
+    min="1"
+    max="99"
+    value="1"
+    step="1"
+  />
+  <button type="button" data-pillow-plus aria-label="Augmenter la quantité">
+    +
+  </button>
+</div>

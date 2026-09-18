@@ -1,0 +1,28 @@
+---
+import { premium35 as p } from '../../data/premium35';
+import Icon from '../Icon.astro';
+---
+
+<section id="product-faq" class="product-shell product-section">
+  <h2 class="product-section-title">الأسئلة اللي كيتعاودو بزاف</h2>
+  <div class="product-faq-layout">
+    <div class="product-faq-list">
+      {p.faq.map((item) => (
+        <details>
+          <summary>
+            {item.question}
+            <Icon name="plus" />
+          </summary>
+          <p>{item.answer}</p>
+        </details>
+      ))}
+    </div>
+    <img
+      src={p.images.hero}
+      alt="أجواء غرفة نوم دافئة"
+      width="675"
+      height="465"
+      loading="lazy"
+    />
+  </div>
+</section>

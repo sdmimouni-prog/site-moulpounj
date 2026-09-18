@@ -1,0 +1,42 @@
+---
+import { pillow } from '../../data/sublimya-visco';
+import Icon from '../Icon.astro';
+---
+
+<section
+  class="container pillow-section"
+  aria-labelledby="pillow-gallery-title"
+>
+  <h2 id="pillow-gallery-title" class="pillow-heading" dir="rtl">
+    شوف التفاصيل عن قرب
+  </h2>
+  <p class="pillow-subtitle" dir="rtl">
+    تفاصيل الوسادة من جميع الزوايا
+  </p>
+  {pillow.media.length ? (
+    <div class="pillow-gallery">
+      {pillow.media.map((m, i) => (
+        <button data-pillow-image={i} aria-label={`Agrandir : ${m.alt}`}>
+          <img src={m.src} alt={m.alt} loading="lazy" />
+          <span>{m.label}</span>
+        </button>
+      ))}
+    </div>
+  ) : (
+    <div class="pillow-gallery pillow-gallery-empty">
+      {['الوسادة كاملة', 'الجانب', 'النسيج', 'عن قرب', 'الاستعمال'].map(
+        (label) => (
+          <div>
+            <Icon name="image" />
+            <strong lang="ar" dir="rtl">
+              {label}
+            </strong>
+            <small lang="ar" dir="rtl">
+              الصورة الأصلية قيد الإضافة
+            </small>
+          </div>
+        ),
+      )}
+    </div>
+  )}
+</section>

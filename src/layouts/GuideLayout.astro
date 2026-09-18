@@ -1,0 +1,24 @@
+---
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Dialogs from '../components/Dialogs.astro';
+import Icon from '../components/Icon.astro';
+import '../styles/guide-article.css';
+const { guide } = Astro.props;
+const draft=guide.status!=='published';
+const visible=!draft||import.meta.env.DEV;
+---
+<Layout language="ar" title={`${guide.title} | Moul Pounj`} description={guide.intro} canonical={guide.canonical}>
+<Header />
+<main id="contenu" class="guide-page" dir="rtl">
+{visible ? <>
+ <section class="guide-hero"><img src={guide.hero} alt="صورة توضيحية لغرفة نوم" width="1600" height="700" fetchpriority="high"/><div class="guide-width"><div class="guide-hero-copy"><nav aria-label="مسار التصفح"><a href="/">الرئيسية</a><span>‹</span><a href="/conseils">نصائح</a><span>‹</span><span>دليل اختيار الماتلا</span></nav><span class="guide-category">{guide.category}</span><h1>{guide.title}</h1><p>{guide.intro}</p><span class="guide-reading"><Icon name="clock"/><span data-guide-reading></span></span></div></div></section>
+ {draft&&<div class="guide-width guide-draft" dir="ltr">Brouillon de développement · Texte éditorial, médias techniques et données produits à valider. Ce guide est masqué dans la version publique.</div>}
+ <div class="guide-width guide-layout"><aside class="guide-sidebar"><details open id="guide-toc"><summary>شنو غادي تلقى فهاد الدليل؟ <Icon name="caret-down"/></summary><nav aria-label="Sommaire">{guide.sections.map((s:{id:string;title:string},i:number)=><a href={`#${s.id}`} data-guide-anchor={s.id}><span>{i+1}</span>{s.title}</a>)}</nav><div class="guide-sidebar-help"><Icon name="headset"/><h2>باقي عندك سؤال؟<br/>حنا هنا للمساعدة.</h2><button class="guide-button" data-contact={guide.contact}>تواصل على واتساب <Icon name="whatsapp-logo"/></button></div></details></aside>
+ <article class="guide-article" aria-label={guide.title}><slot /></article></div>
+ <div class="guide-width guide-ending"><section class="guide-support"><h2>باقي محتار؟ حنا نعاونوك تختار.</h2><p>تواصل معنا باش نعاونوك فاختيار الموديل اللي يناسبك.</p><div><button class="guide-whatsapp" data-contact={guide.contact}><Icon name="whatsapp-logo"/>تواصل على واتساب</button><a class="guide-outline" href="/matelas#comparaison"><Icon name="scales"/>قارن المنتجات</a></div></section><section class="guide-related"><h2>مقالات أخرى ممكن تهمك</h2><div>{guide.articles.map((a:{title:string;href:string;image:string})=><a href={a.href}><img src={a.image} alt="" width="160" height="120" loading="lazy"/><span>{a.title}<small>اقرأ المقال ←</small></span></a>)}</div></section></div>
+ </> : <section class="guide-width guide-unavailable"><h1>{guide.title}</h1><p>هاد الدليل قيد الإعداد والمراجعة.</p><a class="guide-button" href="/conseils">رجع لصفحة النصائح</a></section>}
+</main><Footer showBanner={false}/><Dialogs/>
+</Layout>
+<script>import '../lib/guide-article';</script>

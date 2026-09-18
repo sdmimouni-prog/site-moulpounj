@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../Header.astro';
+import Footer from '../Footer.astro';
+import Dialogs from '../Dialogs.astro';
+import Icon from '../Icon.astro';
+import TestimonialsSection from './TestimonialsSection.astro';
+import OfferCountdown from './OfferCountdown.astro';
+import ReassuranceBar from './ReassuranceBar.astro';
+import seoEntries from '../../data/product-seo.json';
+import type {ProductPage} from '../../data/product-pages';
+import '../../styles/product-landing.css';
+import '../../styles/premium35-layout.css';
+import '../../styles/product-template.css';
+interface Props {product:ProductPage}
+const {product:p}=Astro.props;
+const seo=seoEntries.find(entry=>entry.id===p.id)!;
+const money=(n:number)=>new Intl.NumberFormat('fr-MA').format(n);
+---
+<Layout language="ar" title={seo.title} description={seo.description}>
+<Header/>
+<main id="contenu" class="product-page premium35-page product-template" dir="rtl" data-product-page data-category={p.category}>
+<nav class="product-shell premium-breadcrumb" aria-label="Fil d’Ariane" dir="ltr"><a href="/">Accueil</a><span>/</span><a href={p.categoryHref}>{p.categoryLabel}</a><span>/</span><span aria-current="page">{p.name}</span></nav>
+<section class="product-hero product-shell" aria-labelledby="product-title">
+ <div class="template-gallery"><div class="premium-media"><img class="premium-main-photo" data-main-photo src={p.images[0]?.src} alt={p.images[0]?.alt} width="900" height="800" fetchpriority="high"/><span class="premium-photo-caption">Photo du catalogue source</span></div>{p.images.length>1&&<div class="template-thumbnails" role="group" aria-label="Photos du produit">{p.images.map((im,i)=><button data-gallery-src={im.src} data-gallery-alt={im.alt} aria-label={`Voir la photo ${i+1}`} aria-pressed={i===0?'true':'false'}><img src={im.src} alt="" width="90" height="75" loading="lazy"/></button>)}</div>}</div>
+ <div class="product-hero-inner"><div class="product-hero-copy" dir="rtl"><h1 id="product-title"><bdi>{p.name}</bdi></h1><h2>{p.headline}</h2><p>{p.intro}</p><p class="product-price"><span data-starting-price>{p.variants.length?'ابتداءً من ':''}</span><strong data-variant-price>{money(p.price)}</strong> درهم{!p.variants.length&&<small class="template-unit-price"> للوحدة</small>}</p>
+ {p.variants.length>0?<fieldset class="product-dimensions"><legend>{p.choiceLabel}</legend>{p.variants.map(v=><button type="button" data-variant={v.id} data-price={v.priceMAD} data-option={v.dimension} data-available={String(v.inStock&&v.purchasable)} aria-pressed="false"><bdi>{v.dimension}</bdi></button>)}</fieldset>:<label class="template-quantity">{p.choiceLabel}<input data-quantity type="number" min="1" max="99" step="1" value="1" inputmode="numeric"/></label>}
+ <p class="dimension-note">{p.choiceNote}</p><OfferCountdown/><div class="product-hero-buttons"><button class="button" data-add-product><Icon name="shopping-cart"/>أضف إلى السلة</button><a href="/panier" class="button button-light" data-cart-link hidden>شوف السلة</a><button class="button" data-request-product><Icon name="chat-circle"/>طلب تأكيد الثمن والتوفر</button><a href="/nos-magasins" class="button button-light"><Icon name="map-pin"/>شوف أقرب مغازة</a></div><p data-product-status role="status" aria-live="polite"></p>
+ <section class="template-request" data-request-panel hidden aria-labelledby="request-title"><h3 id="request-title">طلب معلومات على <bdi>{p.name}</bdi></h3><label for="product-request-message">راجع الرسالة<textarea id="product-request-message" data-request-message rows="5"></textarea></label><a class="button" data-send-request target="_blank" rel="noopener noreferrer" hidden><Icon name="whatsapp-logo"/>تواصل على واتساب</a><button class="button button-light" data-copy-request>نسخ الرسالة</button><p data-request-note></p></section>
+ </div></div>
+ <div class="product-reassurance"><div><Icon name="truck"/><span>التوصيل لمدينتك<small>تأكد من المدة والمصاريف</small></span></div><div><Icon name="map-pin"/><span>زور مغازاتنا<small>شوف المنتج عن قرب</small></span></div><div><Icon name="headset"/><span>نعاونوك فالاختيار<small>تواصل مع المستشار</small></span></div></div>
+</section>
+<section class="product-story product-shell product-section"><figure><img src={p.images[1]?.src||p.images[0]?.src} alt={p.images[1]?.alt||p.images[0]?.alt} width="700" height="500" loading="lazy"/><figcaption>{p.name}</figcaption></figure><div class="product-editorial"><h2>{p.category==='salon'?'اختيار البانكيطة كيبدا بالقياس':p.category==='oreillers'?'تعرف على الوسادة ديالك':'راحة كل ليلة… على قياسك'}</h2><p>{p.intro}</p><p>{p.choiceNote}</p><div class="product-story-benefits">{[{icon:'ruler',text:p.category==='oreillers'?'تأكد من الأبعاد':'اختار القياس'},{icon:'image',text:'شوف الصور الأصلية'},{icon:'chat-circle',text:'سول المستشار'}].map(i=><div><Icon name={i.icon}/><span>{i.text}</span></div>)}</div></div></section>
+{p.sourceDescription&&<section class="product-shell product-section template-source-description" dir="ltr"><h2>Description du produit</h2><p>{p.sourceDescription}</p></section>}
+{p.specifications.length>0&&<section class="product-shell product-section template-specifications"><h2 class="product-section-title">المواصفات المنشورة</h2><dl dir="ltr">{p.specifications.map(s=><div><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl><p class="product-disclaimer">معلومات الموقع الأصلي · الشروط والتفاصيل خاصها التأكيد قبل الشراء</p></section>}
+{p.video?.src&&<section class="product-shell product-section template-video"><h2 class="product-section-title">{p.video.title}</h2><video controls preload="none" poster={p.video.poster}><source src={p.video.src}/></video></section>}
+<section class="product-shell product-section"><h2 class="product-section-title">الأسئلة اللي كيتعاودو بزاف</h2><div class="product-faq-list">{p.faq.map(f=><details><summary>{f.q}<Icon name="plus"/></summary><p>{f.a}</p></details>)}</div></section>
+<section class="product-final product-shell product-section" aria-labelledby="product-help-title"><img class="product-help-backdrop" src={p.category==='salon'?'/images/hero/salon.webp':'/images/hero/bedroom.webp'} alt="" width="1600" height="900" loading="lazy"/><div class="product-help-card"><span class="product-help-kicker"><Icon name="headset"/>نختارو الراحة مع بعضنا</span><h2 id="product-help-title">باقي محتار؟ حنا نعاونوك تختار</h2><p><bdi>{p.name}</bdi> · تواصل مع مستشارنا للمساعدة</p><div class="product-final-actions"><button class="button" data-request-product><Icon name="chat-circle"/>طلب معلومات</button><a class="button button-light" href="/nos-magasins"><Icon name="map-pin"/>لقى أقرب مغازة</a></div></div></section>
+<TestimonialsSection reviews={p.reviews}/>
+<ReassuranceBar/>
+{p.slug==='matelas-premium-35'&&<aside class="premium-mobile-buy" aria-label="Commander Matelas Premium 35"><div class="premium-mobile-price"><span><small data-starting-price>ابتداءً من </small><strong data-variant-price>{money(p.price)}</strong> درهم <small data-mobile-option dir="ltr"></small></span><a href="/panier">السلة <Icon name="shopping-cart"/></a></div><div class="premium-mobile-actions"><button class="button" data-add-product><Icon name="shopping-cart"/>أضف إلى السلة</button><button class="button button-light" data-request-product><Icon name="chat-circle"/>طلب معلومات</button></div><p data-mobile-status aria-hidden="true"></p></aside>}
+<script type="application/json" data-product-config set:html={JSON.stringify({id:p.slug,name:p.name,hasVariants:!!p.variants.length,inStock:p.inStock,price:p.price,category:p.category}).replace(/</g,'\\u003c')}/>
+</main><Footer showBanner={false}/><Dialogs/>
+<script>import '../../lib/product-template';</script>
+</Layout>

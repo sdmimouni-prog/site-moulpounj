@@ -1,0 +1,759 @@
+.locator-page {
+  background: #fcf9f5;
+  padding-bottom: 30px;
+}
+.locator-hero {
+  position: relative;
+  min-height: 350px;
+  background: #fbf7f2;
+  overflow: hidden;
+}
+.locator-hero > img {
+  position: absolute;
+  width: 66%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+  mask-image: linear-gradient(to right, #000 65%, transparent);
+}
+.locator-hero .container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.locator-hero-copy {
+  width: 44%;
+  padding: 34px 0;
+  max-width: 510px;
+}
+.locator-hero h1 {
+  font-size: clamp(30px, 3.4vw, 46px);
+  color: var(--orange);
+  line-height: 1.5;
+  margin: 0 0 4px;
+}
+.locator-hero-copy > p {
+  font-size: 19px;
+  line-height: 1.9;
+  margin: 0 0 14px;
+}
+.locator-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 1px solid #ddd6cf;
+  border-radius: 9px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+}
+.locator-search input {
+  background: none;
+  border: 0;
+  width: 100%;
+  min-width: 0;
+  outline-offset: 5px;
+}
+.locator-hero .button {
+  min-height: 46px;
+  border-radius: 9px;
+}
+.locator-hero #locator-geo-status {
+  font-size: 12px;
+  min-height: 20px;
+  margin: 7px 0 0;
+}
+.locator-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-block: 22px;
+  gap: 20px;
+}
+.locator-benefits > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-left: 1px solid #e9ded2;
+}
+.locator-benefits > div:last-child {
+  border: 0;
+}
+.locator-benefits .ph {
+  font-size: 36px;
+  color: var(--orange);
+}
+.locator-benefits strong,
+.locator-benefits small {
+  display: block;
+  font-size: 13px;
+}
+.locator-benefits small {
+  margin-top: 5px;
+  color: #737680;
+}
+.locator-section {
+  padding-top: 10px;
+}
+.locator-heading {
+  text-align: center;
+  margin: 0 0 20px;
+}
+.locator-heading h2 {
+  font-size: 30px;
+  margin: 0;
+}
+.locator-heading p {
+  font-size: 13px;
+  color: #6b6e77;
+}
+.locator-toolbar,
+.locator-results-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.locator-tabs {
+  display: flex;
+  gap: 10px;
+}
+.locator-tabs button,
+.locator-toolbar select {
+  border: 1px solid #e2dbd4;
+  background: white;
+  min-height: 46px;
+  padding: 8px 24px;
+  border-radius: 8px;
+}
+.locator-tabs button[aria-pressed='true'] {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
+.locator-results-meta {
+  font-size: 12px;
+  color: #73716d;
+  margin: 10px 0;
+}
+.locator-results-meta button {
+  color: var(--orange-dark);
+  text-decoration: underline;
+}
+.locator-grid {
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+.locator-list {
+  max-height: 710px;
+  overflow-y: auto;
+  padding: 3px 7px 10px 2px;
+  scrollbar-width: thin;
+}
+.locator-card {
+  background: #fff;
+  display: grid;
+  grid-template-columns: 135px 1fr;
+  gap: 14px;
+  padding: 9px;
+  border: 1px solid #eee5dd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #57351b06;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.locator-card[hidden] {
+  display: none;
+}
+.locator-card.is-selected {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 2px #ff602023;
+}
+.locator-no-photo {
+  background: #f7f1ea;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  color: #9a8170;
+}
+.locator-no-photo .ph {
+  font-size: 38px;
+}
+.locator-no-photo small {
+  font-size: 10px;
+  padding: 8px;
+}
+.locator-card h3 {
+  font-size: 14px;
+  margin: 2px 0 7px;
+}
+.locator-card p {
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 4px 0;
+}
+.locator-card small {
+  font-size: 10px;
+  color: #8b8178;
+}
+.locator-card .ph {
+  color: var(--orange);
+  margin-inline-end: 5px;
+}
+.locator-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 9px;
+}
+.locator-card-actions a,
+.locator-card-actions button {
+  padding: 8px;
+  border: 1px solid #ddd9d3;
+  border-radius: 6px;
+  font-size: 11px;
+  min-height: 38px;
+}
+.locator-card-actions .locator-route {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
+.locator-route .ph {
+  color: white;
+}
+.locator-map-column {
+  position: sticky;
+  top: 105px;
+  min-width: 0;
+}
+#locator-map {
+  height: 660px;
+  border-radius: 14px;
+  background: #eee9e1;
+  z-index: 0;
+}
+#locator-map-status {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #796f64;
+}
+.locator-pin {
+  background: var(--orange);
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px #0004;
+  color: white;
+  text-align: center;
+  padding-top: 4px;
+  font-size: 20px;
+}
+.locator-visit,
+.locator-help {
+  margin-top: 25px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  padding: 28px;
+  background: #fff;
+}
+.locator-visit {
+  text-align: center;
+}
+.locator-visit > .ph {
+  font-size: 80px;
+  color: #159549;
+}
+.locator-visit > .ph:last-child {
+  color: var(--orange);
+}
+.locator-visit h2,
+.locator-help h2 {
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+.locator-visit p,
+.locator-help p {
+  font-size: 14px;
+  max-width: 540px;
+  line-height: 1.9;
+  margin: 0 0 12px;
+}
+.locator-whatsapp {
+  background: #079941;
+  border-radius: 7px;
+  min-height: 42px;
+}
+.locator-help {
+  background: #faeadd;
+  justify-content: space-around;
+  padding: 20px;
+}
+.locator-help > .ph {
+  font-size: 42px;
+  color: var(--orange);
+}
+.locator-help h2 {
+  font-size: 19px;
+}
+.locator-help p {
+  margin: 0;
+}
+.locator-dialog {
+  border: 1px solid #eadfd5;
+  border-radius: 20px;
+  padding: 30px;
+  width: min(600px, calc(100% - 24px));
+  max-height: 85dvh;
+  color: var(--ink);
+}
+.locator-dialog::backdrop {
+  background: #15151580;
+}
+.locator-close {
+  font-size: 28px;
+  min-width: 44px;
+  min-height: 44px;
+  float: left;
+}
+.locator-dialog h2 {
+  font-size: 23px;
+  clear: both;
+}
+.locator-dialog p {
+  line-height: 1.9;
+  font-size: 14px;
+}
+.locator-dialog a {
+  display: inline-block;
+  border: 1px solid #eadfd5;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 5px;
+  color: var(--orange-dark);
+}
+.locator-dialog button[data-contact] {
+  padding: 12px;
+  border-radius: 8px;
+  background: #078446;
+  color: white;
+  margin: 8px 0;
+}
+.locator-page :focus-visible {
+  outline: 3px solid #da5625;
+  outline-offset: 4px;
+}
+.desktop-nav a[aria-current='page'] {
+  color: var(--orange);
+  box-shadow: 0 2px var(--orange);
+}
+@media (max-width: 1000px) {
+  .locator-card {
+    grid-template-columns: 1fr;
+  }
+  .locator-no-photo {
+    display: none;
+  }
+  .locator-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .locator-hero-copy {
+    width: 49%;
+  }
+  .locator-benefits {
+    gap: 8px;
+  }
+  .locator-benefits > div {
+    gap: 8px;
+  }
+  .locator-benefits .ph {
+    font-size: 28px;
+  }
+}
+@media (max-width: 767px) {
+  .locator-hero > img {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    mask-image: none;
+    object-position: center 42%;
+  }
+  .locator-hero-copy {
+    width: 100%;
+    max-width: none;
+    padding: 22px 0 10px;
+  }
+  .locator-hero h1 {
+    font-size: 32px;
+  }
+  .locator-hero-copy > p {
+    font-size: 16px;
+  }
+  .locator-hero .button {
+    width: 100%;
+  }
+  .locator-benefits {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 10px;
+    padding-block: 24px;
+  }
+  .locator-benefits > div {
+    justify-content: start;
+    border: 0;
+  }
+  .locator-benefits strong,
+  .locator-benefits small {
+    font-size: 11px;
+  }
+  .locator-grid {
+    display: block;
+  }
+  .locator-grid[data-view='list'] .locator-map-column,
+  .locator-grid[data-view='map'] .locator-list {
+    display: none;
+  }
+  .locator-list {
+    max-height: none;
+    padding: 0;
+  }
+  .locator-map-column {
+    position: static;
+  }
+  #locator-map {
+    height: 460px;
+  }
+  .locator-toolbar {
+    flex-wrap: wrap;
+  }
+  .locator-toolbar > label,
+  .locator-toolbar select {
+    width: 100%;
+  }
+  .locator-tabs {
+    width: 100%;
+  }
+  .locator-tabs button {
+    flex: 1;
+    padding: 10px;
+  }
+  .locator-card {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+  .locator-card h3 {
+    font-size: 16px;
+  }
+  .locator-card p {
+    font-size: 13px;
+  }
+  .locator-card-actions a,
+  .locator-card-actions button {
+    min-height: 44px;
+    font-size: 12px;
+  }
+  .locator-visit,
+  .locator-help {
+    gap: 15px;
+    padding: 24px 18px;
+    flex-wrap: wrap;
+  }
+  .locator-visit > .ph {
+    font-size: 38px;
+  }
+  .locator-visit > .ph:last-child {
+    display: none;
+  }
+  .locator-visit h2 {
+    font-size: 23px;
+  }
+  .locator-help {
+    text-align: center;
+  }
+  .locator-dialog {
+    padding: 20px;
+  }
+}
+
+/* Visit banner: decorative photography only; every message remains HTML. */
+.locator-visit {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  padding: 0;
+  min-height: 200px;
+  aspect-ratio: 6.65;
+  overflow: hidden;
+  background: #fffdfb;
+  border-radius: 16px;
+  box-shadow: 0 3px 5px #4e321009;
+}
+.locator-visit .visit-decoration {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+.locator-visit .visit-copy {
+  width: 38%;
+  margin-left: 39%;
+  padding: 22px 0 18px;
+  text-align: right;
+  position: relative;
+}
+.locator-visit h2 {
+  font-size: clamp(21px, 2vw, 30px);
+  font-weight: 800;
+  line-height: 1.6;
+  margin: 0 0 10px;
+  white-space: nowrap;
+  color: #121b2a;
+}
+.locator-visit .visit-copy p {
+  font-size: clamp(15px, 1.45vw, 21px);
+  font-weight: 600;
+  line-height: 1.7;
+  margin: 0 0 14px;
+  color: #535d6c;
+  max-width: none;
+}
+.locator-visit .locator-whatsapp {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  background: #06b83e;
+  border: 1px solid #37cc66;
+  min-height: 42px;
+  padding: 8px 19px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  gap: 8px;
+  box-shadow: 0 2px 3px #006b1415;
+}
+.locator-visit .locator-whatsapp .ph {
+  font-size: 24px;
+}
+.locator-visit .locator-whatsapp:hover {
+  background: #079d38;
+  transform: translateY(-2px);
+}
+.locator-visit .visit-bubble {
+  position: absolute;
+  left: 21.2%;
+  top: 21%;
+  width: 14.5%;
+  padding: 15px 8px;
+  background: #fffdfb;
+  border-radius: 15px;
+  text-align: center;
+  font-size: clamp(13px, 1.35vw, 20px);
+  line-height: 1.8;
+  color: #4b5663;
+  margin: 0;
+  box-shadow: 0 7px 22px #553e2005;
+}
+.visit-bubble strong {
+  color: #15202f;
+  font-weight: 800;
+}
+@media (max-width: 1000px) and (min-width: 768px) {
+  .locator-visit {
+    min-height: 205px;
+  }
+  .locator-visit .visit-copy {
+    width: 43%;
+    margin-left: 33%;
+    padding-block: 20px;
+  }
+  .locator-visit h2 {
+    font-size: 21px;
+  }
+  .locator-visit .visit-copy p {
+    font-size: 15px;
+  }
+  .locator-visit .visit-bubble {
+    left: 17%;
+    width: 15%;
+    font-size: 12px;
+  }
+  .locator-visit .locator-whatsapp {
+    font-size: 15px;
+    padding: 7px 12px;
+  }
+}
+@media (max-width: 767px) {
+  .locator-visit {
+    min-height: 0;
+    aspect-ratio: auto;
+    padding: 175px 20px 24px;
+  }
+  .locator-visit .visit-decoration {
+    height: 180px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+  }
+  .locator-visit .visit-copy {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0;
+    text-align: center;
+  }
+  .locator-visit h2 {
+    font-size: 23px;
+    white-space: normal;
+    margin-bottom: 8px;
+  }
+  .locator-visit .visit-copy p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+  .locator-visit .visit-bubble {
+    left: 35%;
+    top: 38px;
+    width: 30%;
+    padding: 10px 6px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+  .locator-visit .locator-whatsapp {
+    width: 100%;
+    justify-content: center;
+    font-size: 17px;
+    min-height: 46px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .locator-visit .locator-whatsapp:hover {
+    transform: none;
+  }
+}
+.locator-visit .visit-decoration {
+  object-position: center 32%;
+}
+.locator-visit .visit-decoration-right {
+  clip-path: inset(0 0 0 78%);
+  object-position: center 50%;
+}
+.locator-visit .visit-copy {
+  width: 35%;
+  margin-left: 40%;
+}
+@media (max-width: 1000px) and (min-width: 768px) {
+  .locator-visit .visit-copy {
+    width: 43%;
+    margin-left: 33%;
+  }
+}
+@media (max-width: 767px) {
+  .locator-visit {
+    padding-top: 135px;
+  }
+  .locator-visit .visit-decoration {
+    height: auto;
+    object-fit: contain;
+    top: 0;
+  }
+  .locator-visit .visit-decoration-right {
+    display: none;
+  }
+  .locator-visit .visit-copy {
+    width: 100%;
+    margin: 0;
+  }
+  .locator-visit .visit-bubble {
+    top: 32px;
+    left: 32%;
+    width: 36%;
+    padding: 8px 5px;
+  }
+}
+@media (min-width: 768px) {
+  .locator-visit {
+    aspect-ratio: auto;
+  }
+  .locator-visit .visit-copy {
+    padding-block: 18px;
+  }
+  .locator-visit h2 {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .locator-visit .visit-copy p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+  .locator-visit .visit-decoration:not(.visit-decoration-right) {
+    clip-path: inset(0 22% 0 0);
+  }
+}
+.locator-city-pin {
+  font-size: 16px;
+  font-weight: 800;
+  padding-top: 4px;
+  background: #fa571d;
+}
+.locator-exact-pin {
+  background: #205541;
+}
+.locator-pin.is-selected {
+  outline: 4px solid #ffb080;
+  outline-offset: 3px;
+  z-index: 1000 !important;
+}
+.locator-store-popup {
+  font-family: 'Nunito Sans', sans-serif;
+  min-width: 190px;
+}
+.locator-store-popup small {
+  display: block;
+  color: #776b60;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.locator-store-popup button {
+  display: block;
+  width: 100%;
+  text-align: start;
+  border: 1px solid #eadfd5;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 6px 0;
+  min-height: 40px;
+  color: #b74314;
+  font-weight: 700;
+  background: #fff9f3;
+}
+.locator-store-popup button:hover {
+  background: #ffeadc;
+}
+
+/* Match the product-page content width and responsive gutters. */
+.locator-page > .container,
+.locator-page > .locator-hero {
+  width: min(1300px, calc(100% - 80px));
+  max-width: 1300px;
+  margin-inline: auto;
+}
+@media (max-width: 1100px) {
+  .locator-page > .container,
+  .locator-page > .locator-hero { width: calc(100% - 48px); }
+}
+@media (max-width: 600px) {
+  .locator-page > .container,
+  .locator-page > .locator-hero { width: calc(100% - 32px); }
+}

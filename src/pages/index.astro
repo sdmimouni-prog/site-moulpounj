@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Categories from '../components/Categories.astro';
+import Products from '../components/Products.astro';
+import ChoiceGuide from '../components/ChoiceGuide.astro';
+import Trust from '../components/Trust.astro';
+import Stores from '../components/Stores.astro';
+import Reviews from '../components/Reviews.astro';
+import Footer from '../components/Footer.astro';
+import Dialogs from '../components/Dialogs.astro';
+import { site } from '../data/site';
+---
+
+<Layout>
+  <Header />
+  <main id="contenu">
+    <Hero />
+    <div class="preview-note container">{site.preview}</div>
+    <Categories />
+    <Products />
+    <ChoiceGuide />
+    <Trust />
+    <Stores />
+    <Reviews />
+  </main>
+  <Footer />
+  <Dialogs />
+  <noscript>
+    <p class="noscript">
+      JavaScript est nécessaire pour les filtres, le menu et l’aide au choix.
+      Les sections restent accessibles par leurs liens.
+    </p>
+  </noscript>
+</Layout>

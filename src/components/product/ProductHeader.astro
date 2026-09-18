@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/logo.png';
+import Icon from '../Icon.astro';
+---
+
+<a class="skip-link" href="#product-content">
+  انتقل للمحتوى
+</a>
+<header class="product-header" dir="ltr">
+  <div class="product-header-inner">
+    <button
+      class="icon-button"
+      data-product-menu
+      aria-label="فتح القائمة"
+      aria-expanded="false"
+      aria-controls="product-menu"
+    >
+      <Icon name="list" />
+    </button>
+    <a class="product-logo" href="/" aria-label="Moul Pounj — الصفحة الرئيسية">
+      <Image
+        src={logo}
+        width={994}
+        height={434}
+        widths={[180, 360]}
+        sizes="150px"
+        format="webp"
+        alt="مول البونج — Moul Pounj"
+      />
+    </a>
+    <div class="product-header-actions">
+      <button
+        class="icon-button product-cart"
+        data-product-cart
+        aria-label="السلة"
+      >
+        <Icon name="shopping-cart" />
+        <span data-product-cart-count>0</span>
+      </button>
+      <button
+        class="product-whatsapp"
+        data-product-contact
+        aria-label="تواصل على واتساب"
+      >
+        <Icon name="whatsapp-logo" />
+      </button>
+    </div>
+  </div>
+  <nav id="product-menu" aria-label="القائمة الرئيسية" hidden dir="rtl">
+    <a href="/">الرئيسية</a>
+    <a href="/#selection">المراتب</a>
+    <a href="/#categories">الصالون المغربي والوسادات</a>
+    <a href="/#magasins">مغازاتنا</a>
+    <a href="#product-faq">الأسئلة المتكررة</a>
+    <button data-product-contact>تواصل معنا</button>
+  </nav>
+</header>

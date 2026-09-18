@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Dialogs from '../components/Dialogs.astro';
+import Icon from '../components/Icon.astro';
+import { offers, offerCategories, featuredOffer as featured, formatOfferPrice as price, offerDiscount as discount } from '../data/offers';
+import '../styles/offers.css';
+---
+<Layout language="ar" title="عروض مول البونج | Offres Moul Pounj" description="اكتشف عروض مول البونج على الماتلات والبانكيطات والوسادات، مع الأسعار حسب القياس.">
+  <Header />
+  <main id="contenu" class="offers-page" dir="rtl">
+    <section class="offers-hero">
+      <img src="/images/hero/bedroom.webp" alt="غرفة نوم دافئة — صورة توضيحية" width="1536" height="1024" fetchpriority="high" />
+      <div class="offers-hero-shade"></div>
+      <div class="offers-container"><div class="offers-hero-copy">
+        <h1><em>الراحة لي بغيتي...</em><br />بثمن يعجبك.</h1>
+        <p>شوف العروض اللي كاينة. واختار<br />اللي يناسب راحتك وميزانيتك.</p>
+        <a class="offer-button" href="#all-offers">اكتشف العروض <Icon name="arrow-left" /></a>
+      </div></div>
+    </section>
+    <div class="offers-container">
+      <nav class="offer-filters" aria-label="تصفية العروض">
+        {offerCategories.map((category, i) => <button type="button" data-offer-filter={category.id} aria-pressed={i === 0}><Icon name={category.icon} /><span>{category.label}</span></button>)}
+      </nav>
+      <p class="offers-demo" dir="ltr">10 produits de la page Promotions de moulpounj.ma · Prix récupérés le 18/09/2026. Disponibilité et conditions à confirmer.</p>
+      <section class="featured-offer" aria-label="عرض مميز" data-offer-category="matelas">
+        <div class="featured-photo"><img src={featured.image} alt={featured.name} width="1000" height="600" /><span class="offer-discount" dir="ltr">-{discount(featured.price, featured.oldPrice)}%</span></div>
+        <div class="featured-copy"><span class="offer-label">عرض مميز</span><h2 dir="ltr">{featured.name}</h2><p>{featured.description}</p><div class="offer-benefits"><span><Icon name="cloud" />اختار راحتك</span><span><Icon name="user" />نصيحة تناسبك</span><span><Icon name="ruler" />تأكد من القياس</span></div></div>
+        <div class="featured-price"><del>{price(featured.oldPrice)} درهم</del><strong><bdi>{price(featured.price)}</bdi> <small>درهم</small></strong><span>{featured.dimensions}</span><a class="offer-button" href={featured.href}>شوف العرض <Icon name="arrow-left" /></a></div>
+      </section>
+      <section id="all-offers" class="all-offers">
+        <h2 class="offers-title">جميع العروض</h2><p class="offers-subtitle">اكتشف كل التخفيضات على المراتب، البانكيطات والوسادات.</p>
+        <div class="offer-grid" dir="ltr">
+          {offers.map(offer => <article class="offer-card" data-offer-category={offer.category}>
+            <a href={offer.href} class="offer-card-photo" tabindex="-1" aria-hidden="true"><img src={offer.image} alt="" loading="lazy" width="600" height="400" /><span class="offer-discount">-{discount(offer.price, offer.oldPrice)}%</span></a>
+            <div class="offer-card-body" dir="rtl"><h3><bdi>{offer.name}</bdi></h3><p>{offer.description}</p><del>{price(offer.oldPrice)} درهم</del><strong><bdi>{price(offer.price)}</bdi> <small>درهم</small></strong><span class="offer-dimensions">{offer.dimensions || 'تفاصيل العرض حسب الموديل'}</span><a class="offer-button" href={offer.href}>شوف العرض <Icon name="arrow-left" /></a></div>
+          </article>)}
+        </div>
+        <p class="offer-filter-status" aria-live="polite" aria-atomic="true"></p>
+      </section>
+    </div>
+    <section class="offers-services offers-container" aria-label="نرافقوك فالاختيار">
+      {[{icon:'truck',title:'التوصيل',text:'سولنا على مدينتك'},{icon:'shield-check',title:'تفاصيل الجودة',text:'تعرف على المنتجات'},{icon:'headset',title:'فريقنا رهن إشارتك',text:'للمساعدة والنصيحة'},{icon:'credit-card',title:'طرق الأداء',text:'تأكد من الوسائل المتاحة'}].map(item=><div><Icon name={item.icon}/><p><strong>{item.title}</strong><span>{item.text}</span></p></div>)}
+    </section>
+    <section class="offers-help offers-container">
+      <div><h2>لقيتي عرض وعندك شي سؤال ؟</h2><p>تواصل معنا على واتساب، فريقنا جاهز باش يجاوبك.</p><button data-contact="Bonjour, je souhaite connaître les promotions Moul Pounj actuellement disponibles." class="offer-whatsapp"><Icon name="whatsapp-logo"/>تواصل على واتساب</button></div>
+    </section>
+  </main>
+  <Footer showBanner={false} /><Dialogs />
+</Layout>
+<script>
+  import '../lib/offers';
+</script>

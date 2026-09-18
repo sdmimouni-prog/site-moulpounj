@@ -1,0 +1,176 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import Icon from './Icon.astro';
+import NavigationLink from './NavigationLink.astro';
+import MegaMenu from './MegaMenu.astro';
+import { megaMenus, homeLink } from '../data/mega-menus';
+import '../styles/mega-menu.css';
+import { adviceLinks, directLinks, secondaryLinks } from '../data/navigation';
+---
+
+<a class="skip-link" href="#contenu">
+  Aller au contenu
+</a>
+<div class="topbar">
+  <div class="container">
+    <span class="topbar-tagline">Le confort, à la marocaine.</span>
+    <nav aria-label="Navigation secondaire">
+      {secondaryLinks.map((item) => (
+        <NavigationLink item={item} />
+      ))}
+    </nav>
+  </div>
+</div>
+<header class="header">
+  <div class="container header-inner">
+    <a
+      class="logo"
+      href={Astro.url.pathname === '/' ? '#accueil' : '/'}
+      aria-label="Moul Pounj — accueil"
+    >
+      <Image
+        src={logo}
+        widths={[160, 320]}
+        sizes="160px"
+        format="webp"
+        quality={90}
+        alt="مول البونج — Moul Pounj"
+        width="994"
+        height="434"
+        fetchpriority="high"
+      />
+    </a>
+    <nav class="desktop-nav" aria-label="Navigation principale">
+      <NavigationLink item={homeLink} />
+      {megaMenus.map((menu) => {
+        const Trigger = 'a';
+        const href = menu.id === 'matelas' ? '/matelas' : '/salon-marocain';
+        return (
+        <div class="nav-disclosure">
+          <Trigger
+            href={href}
+            id={`trigger-${menu.id}`}
+            class:list={[
+              'nav-trigger',
+              {
+                'route-active':
+                  (Astro.url.pathname === '/salon-marocain' && menu.id === 'salon') ||
+                  (Astro.url.pathname === '/matelas' && menu.id === 'matelas'),
+              },
+            ]}
+            aria-current={Astro.url.pathname === href ? 'page' : undefined}
+            data-nav-trigger
+            aria-expanded="false"
+            aria-controls={`nav-${menu.id}`}
+          >
+            {menu.label}
+          </Trigger>
+          <button type="button" class="nav-menu-toggle" data-menu-toggle={`trigger-${menu.id}`} aria-label={`Ouvrir le menu ${menu.label}`} aria-controls={`nav-${menu.id}`} aria-expanded="false"><Icon name="caret-down" /></button>
+          <MegaMenu menu={menu} />
+        </div>
+      ); })}
+      {directLinks.map((item) => (
+        <NavigationLink item={item} />
+      ))}
+      <div class="nav-disclosure advice-disclosure">
+        <a
+          href="/conseils"
+          class="nav-trigger"
+          data-nav-trigger
+          aria-expanded="false"
+          id="trigger-conseils"
+          aria-controls="nav-conseils"
+        >
+          Conseils
+        </a>
+        <button type="button" class="nav-menu-toggle" data-menu-toggle="trigger-conseils" aria-label="Ouvrir le menu Conseils" aria-controls="nav-conseils" aria-expanded="false"><Icon name="caret-down" /></button>
+        <div id="nav-conseils" class="nav-panel advice-menu" hidden>
+          <div class="nav-link-group">
+            {adviceLinks.map((item) => (
+              <NavigationLink item={item} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <a
+        class="button whatsapp-button"
+        href="https://wa.me/212679414995"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contacter Moul Pounj sur WhatsApp"
+      >
+        <Icon name="whatsapp-logo" />
+        <span>WhatsApp</span>
+      </a>
+      <button
+        class="icon-button cart-button"
+        data-dialog="cart"
+        aria-label="Ouvrir le panier"
+      >
+        <Icon name="shopping-cart" />
+        <span class="cart-count" data-cart-count>
+          0
+        </span>
+      </button>
+      <button
+        class="icon-button menu-toggle"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <Icon name="list" />
+      </button>
+    </div>
+  </div>
+  <nav
+    id="mobile-menu"
+    class="mobile-nav"
+    aria-label="Navigation mobile"
+    hidden
+  >
+    <NavigationLink item={homeLink} />
+    {megaMenus.map((menu) => (
+      <details name="mobile-product-menu">
+        <summary>
+          <a href={menu.id === 'matelas' ? '/matelas' : '/salon-marocain'}>{menu.label}</a>
+          <Icon name="caret-down" />
+        </summary>
+        <div class="mobile-submenu">
+          <h2>{menu.heading}</h2>
+          {menu.discover
+            .filter((item) => item.enabled !== false)
+            .map((item) => (
+              <NavigationLink item={item} />
+            ))}
+          <h2>Bien choisir</h2>
+          {menu.advice
+            .filter((item) => item.enabled !== false)
+            .map((item) => (
+              <NavigationLink item={item} />
+            ))}
+        </div>
+      </details>
+    ))}
+    {directLinks.map((item) => (
+      <NavigationLink item={item} />
+    ))}
+    <details>
+      <summary>
+        <a href="/conseils">Conseils</a> <Icon name="caret-down" />
+      </summary>
+      <div class="mobile-submenu">
+        {adviceLinks.map((item) => (
+          <NavigationLink item={item} />
+        ))}
+      </div>
+    </details>
+  </nav>
+  <div class="nav-backdrop" hidden aria-hidden="true"></div>
+</header>
+<script>
+  import '../lib/navigation';
+</script>
+                                                                                                                                                                                                                                                                                       

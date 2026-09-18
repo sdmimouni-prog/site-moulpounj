@@ -1,0 +1,12 @@
+---
+import Icon from '../Icon.astro';
+const items = [
+  {icon:'truck',title:'Livraison à domicile',text:'Délais et frais de livraison à confirmer selon votre ville.'},
+  {icon:'headset',title:'Service client',text:'Nos conseillers vous accompagnent dans le choix de votre produit.'},
+  {icon:'shield-check',title:'Commande accompagnée',text:'Confirmez les modalités de paiement avec votre conseiller.'},
+  {icon:'tag',title:'Prix d’usine',text:'Découvrez les prix et les dimensions disponibles sur chaque fiche.'},
+];
+---
+<section class="product-trust-bar" aria-label="Nos services" lang="fr" dir="ltr">
+  <div class="product-shell product-trust-grid">{items.map(item => <div class="product-trust-item"><Icon name={item.icon}/><div><h3>{item.title}</h3><p>{item.text}</p></div></div>)}</div>
+</section>

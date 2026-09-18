@@ -1,0 +1,128 @@
+{
+  "status": "draft_not_deployed",
+  "scope": "14 URL produit publiques et catégories connues ; autres URL historiques à compléter par export sitemap complet avant bascule",
+  "routes": [
+    {
+      "oldUrl": "https://moulpounj.ma/produit/ellipse/",
+      "oldPath": "/produit/ellipse/",
+      "newPath": "/produit/ellipse",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/ellipse-topper/",
+      "oldPath": "/produit/ellipse-topper/",
+      "newPath": "/produit/ellipse-topper",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/oreiller-sublimya-visco/",
+      "oldPath": "/produit/oreiller-sublimya-visco/",
+      "newPath": "/produit/oreiller-sublimya-visco",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/ponge-33-abs/",
+      "oldPath": "/produit/ponge-33-abs/",
+      "newPath": "/produit/ponge-33-abs",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/banquette-sublimya-touch-33-abs/",
+      "oldPath": "/produit/banquette-sublimya-touch-33-abs/",
+      "newPath": "/produit/banquette-sublimya-touch-33-abs",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/banquette-sublimya-premium-35/",
+      "oldPath": "/produit/banquette-sublimya-premium-35/",
+      "newPath": "/produit/banquette-sublimya-premium-35",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/matelas-relief-hr/",
+      "oldPath": "/produit/matelas-relief-hr/",
+      "newPath": "/produit/matelas-relief-hr",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/matelas-relief-35/",
+      "oldPath": "/produit/matelas-relief-35/",
+      "newPath": "/produit/matelas-relief-35",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/matelas-premium-35/",
+      "oldPath": "/produit/matelas-premium-35/",
+      "newPath": "/produit/matelas-premium-35",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/matelas-etudiant/",
+      "oldPath": "/produit/matelas-etudiant/",
+      "newPath": "/produit/matelas-etudiant",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/full-hr/",
+      "oldPath": "/produit/full-hr/",
+      "newPath": "/produit/full-hr",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/matelas-relief-33-abs/",
+      "oldPath": "/produit/matelas-relief-33-abs/",
+      "newPath": "/produit/matelas-relief-33-abs",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/matelas-full-hr/",
+      "oldPath": "/produit/matelas-full-hr/",
+      "newPath": "/produit/matelas-full-hr",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldUrl": "https://moulpounj.ma/produit/matelas-touch-33-abs/",
+      "oldPath": "/produit/matelas-touch-33-abs/",
+      "newPath": "/produit/matelas-touch-33-abs",
+      "action": "preserve_path",
+      "note": "Même chemin hors slash final : aucune redirection vers soi-même. Normalisation du slash à configurer selon hébergement."
+    },
+    {
+      "oldPath": "/matelas-en-mousse/",
+      "newPath": "/matelas?technologie=mousse",
+      "action": "proposed_301",
+      "evidence": "categorySource.link"
+    },
+    {
+      "oldPath": "/matelas-a-ressorts-ensaches/",
+      "newPath": "/matelas?technologie=ressorts",
+      "action": "proposed_301",
+      "evidence": "categorySource.link"
+    },
+    {
+      "oldPath": "/salon-marocain/",
+      "newPath": "/salon-marocain",
+      "action": "preserve_path",
+      "note": "Conserver le chemin et normaliser le slash au niveau hébergeur."
+    },
+    {
+      "oldPath": "/nos-magasins/",
+      "newPath": "/nos-magasins",
+      "action": "preserve_path",
+      "note": "Conserver le chemin et normaliser le slash au niveau hébergeur."
+    }
+  ]
+}

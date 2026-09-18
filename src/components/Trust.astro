@@ -1,0 +1,31 @@
+---
+import { site } from '../data/site';
+import Icon from './Icon.astro';
+import '../styles/trust-motion.css';
+---
+
+<section class="container section trust" aria-labelledby="trust-title">
+  <div class="section-heading centered">
+    <h2 id="trust-title" lang="ar" dir="rtl">
+      {site.headings.trust} <bdi>Moul Pounj</bdi> ؟
+    </h2>
+  </div>
+  <div class="trust-grid">
+    {site.trust.map((t, index) => (
+      <div class="trust-entrance" style={`--entry-delay: ${index * 110}ms`}>
+        <article class="trust-card" data-trust-icon={t.icon}>
+          <Icon name={t.icon} />
+          <h3 lang="ar" dir="rtl">
+            {t.title}
+          </h3>
+          <p>{t.label}</p>
+          <small>{t.note}</small>
+        </article>
+      </div>
+    ))}
+  </div>
+</section>
+
+<script>
+  import '../lib/trust-motion';
+</script>

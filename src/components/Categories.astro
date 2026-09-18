@@ -1,0 +1,42 @@
+---
+import { site } from '../data/site';
+import Media from './Media.astro';
+import Icon from './Icon.astro';
+---
+
+<section
+  id="categories"
+  class="container section categories"
+  aria-labelledby="categories-title"
+>
+  <div class="section-heading centered">
+    <h2 id="categories-title" lang="ar" dir="rtl">
+      {site.headings.categories}
+    </h2>
+    <p lang="ar" dir="rtl">
+      كل ما تحتاجه لدارك
+    </p>
+  </div>
+  <div class="category-grid">
+    {site.categories.map((c) => (
+      <article class="category-card">
+        <Media src={c.image} alt={`Collection ${c.name}`} icon={c.icon} />
+        <div class="category-body">
+          <h3>{c.name}</h3>
+          <p lang="ar" dir="rtl">
+            {c.arabic}
+          </p>
+          <a
+            class="button"
+            href={c.id === 'magasins' ? '#magasins' : c.id === 'matelas' ? '/matelas' : c.id === 'salon' ? '/salon-marocain' : '/produit/oreiller-sublimya-visco'}
+          >
+            <span lang="ar" dir="rtl">
+              {c.cta}
+            </span>
+            <Icon name="caret-right" />
+          </a>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

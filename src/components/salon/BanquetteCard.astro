@@ -1,0 +1,29 @@
+---
+import type { Banquette } from '../../data/salon';
+import Icon from '../Icon.astro';
+interface Props {
+  product: Banquette;
+}
+const { product: p } = Astro.props;
+---
+
+<article class="banquette-card" id={p.id}>
+  <a class="banquette-media" href={p.href} aria-label={`Découvrir ${p.name}`}>
+    {p.image ? (
+      <img src={p.image} alt={p.name} width="600" height="400" loading="lazy" />
+    ) : (
+      <div class="banquette-photo-pending">
+        <Icon name="armchair" />
+        <span>صورة هاد المرجع قيد الإضافة</span>
+      </div>
+    )}
+  </a>
+  <div class="banquette-copy">
+    <h3>
+      <bdi>{p.name}</bdi>
+    </h3>
+    <p>{p.variantsCount} خيارات متوفرة · الثمن حسب القياس</p>
+    <p class="banquette-price">ابتداءً من <bdi>{p.priceMAD.toLocaleString('fr-MA')} MAD</bdi></p>
+    <a class="button" href={p.href}>شوف التفاصيل <Icon name="arrow-left" /></a>
+  </div>
+</article>

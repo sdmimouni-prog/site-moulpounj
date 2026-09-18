@@ -1,0 +1,45 @@
+---
+import Icon from '../Icon.astro';
+interface Props {
+  poster: string;
+  src?: string;
+  duration?: string;
+  title: string;
+  description: string;
+}
+const { poster, src = '', duration = '', title, description } = Astro.props;
+---
+
+<section class="product-video product-shell product-section">
+  <div class="product-editorial">
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <small>{src ? '' : 'الفيديو الرسمي قريباً · غير متوفر حالياً'}</small>
+  </div>
+  <div class="product-video-frame">
+    {src ? (
+      <video controls preload="none" poster={poster} aria-label={title}>
+        <source src={src} />
+        <track kind="captions" />
+      </video>
+    ) : (
+      <button
+        class="product-video-preview"
+        data-product-video
+        aria-label="معلومات فيديو المنتج"
+      >
+        <img
+          src={poster}
+          alt="معاينة تفاصيل المرتبة"
+          width="675"
+          height="465"
+          loading="lazy"
+        />
+        <span class="product-play">
+          <Icon name="play" />
+        </span>
+        <span class="product-video-label">{duration || 'الفيديو قريباً'}</span>
+      </button>
+    )}
+  </div>
+</section>

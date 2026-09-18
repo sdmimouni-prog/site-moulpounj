@@ -1,0 +1,218 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Dialogs from '../components/Dialogs.astro';
+import Icon from '../components/Icon.astro';
+import BanquetteCard from '../components/salon/BanquetteCard.astro';
+import SalonGallery from '../components/salon/SalonGallery.astro';
+import { salon, banquettes } from '../data/salon';
+import '../styles/salon.css';
+---
+
+<Layout
+  language="ar"
+  title="Salon marocain & Banquettes | Moul Pounj"
+  description="اكتشف بانكيطات SUBLIMYA من مول البونج، وتأكد من القياسات ومحتوى العرض قبل الاختيار."
+>
+  <Header />
+  <main id="contenu" class="salon-page" dir="rtl">
+    <section class="salon-hero">
+      <img
+        src={salon.hero}
+        alt="صالون مغربي دافئ — صورة أجواء لا تمثل محتوى العرض"
+        width="1942"
+        height="809"
+        fetchpriority="high"
+      />
+      <div class="salon-hero-shade"></div>
+      <div class="container">
+        <div class="salon-hero-copy">
+          <h1>
+            <em>اللمة زوينة…</em>
+            <br />
+            والراحة كتكمّلها.
+          </h1>
+          <p>اختار البانكيطة اللي توالم صالونك، راحتك وميزانيتك.</p>
+          <a class="button" href="#banquettes">
+            شوف البانكيطات <Icon name="arrow-left" />
+          </a>
+          <button class="button button-outline" data-contact={salon.contact}>
+            عاونوني نختار <Icon name="headset" />
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="container salon-reassurance">
+      {salon.reassurance.map((i) => (
+        <div>
+          <Icon name={i.icon} />
+          <p>
+            <strong>{i.title}</strong>
+            <span>{i.text}</span>
+          </p>
+        </div>
+      ))}
+    </div>
+    <section id="banquettes" class="container salon-section">
+      <h2 class="salon-title">تشكيلة البانكيطات ديالنا</h2>
+      <p class="salon-subtitle">
+        تعرف على المراجع، وتأكد من تفاصيل العرض قبل الاختيار
+      </p>
+      <div class="banquette-grid">
+        {banquettes.map((product) => (
+          <BanquetteCard product={product} />
+        ))}
+      </div>
+      <p class="salon-offer-note">
+        البانكيطة المباعة ومحتوى العرض خاصهم التأكيد. صور الصالونات للتوضيح فقط،
+        وما كتعنيش أن الأثاث، الأثواب والإكسسوارات داخلين فالثمن.
+      </p>
+    </section>
+    <section class="container salon-section salon-advice">
+      <h2 class="salon-title">شنو هي البانكيطة المناسبة ليك؟</h2>
+      <div class="salon-advice-grid">
+        {salon.advice.map((i) => (
+          <article>
+            <Icon name={i.icon} />
+            <h3>{i.title}</h3>
+            <p>{i.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+    <section class="container salon-section salon-measures">
+      <div>
+        <h2>{salon.guide.title}</h2>
+        <p>{salon.guide.body}</p>
+        <button class="button" data-salon-guide>
+          دليل القياسات <Icon name="arrow-left" />
+        </button>
+      </div>
+      <figure>
+        <img
+          src={salon.ambiance}
+          alt="صورة أجواء صالون، ليست رسماً لقياسات المنتج"
+          width="700"
+          height="450"
+          loading="lazy"
+        />
+        <figcaption>صورة أجواء · القياسات الرسمية قيد الإضافة</figcaption>
+      </figure>
+    </section>
+    {(salon.video.src || salon.preview) && (
+      <section class="container salon-section salon-media">
+        <h2 class="salon-title">شوف الجودة عن قرب</h2>
+        {salon.video.src ? (
+          <video
+            controls
+            preload="none"
+            poster={salon.video.poster || undefined}
+            aria-label="فيديو البانكيطات"
+          >
+            <source src={salon.video.src} />
+          </video>
+        ) : (
+          <div class="salon-media-pending">
+            <Icon name="video-camera" />
+            <div>
+              <h3>الفيديو وصور التفاصيل قيد الإضافة</h3>
+              <p>
+                معاينة التطوير — هاد البلوك مخفي فالنسخة العامة حتى يتوفر
+                المحتوى.
+              </p>
+            </div>
+          </div>
+        )}
+        <div class="salon-detail-grid">
+          {salon.details.map((image) => (
+            <img
+              src={image.src}
+              alt={image.alt}
+              width="300"
+              height="220"
+              loading="lazy"
+            />
+          ))}
+        </div>
+      </section>
+    )}
+    <SalonGallery />
+    {(salon.testimonials.length > 0 || salon.preview) && (
+      <section class="container salon-section">
+        <h2 class="salon-title">آراء زبنائنا</h2>
+        <div class="salon-review-grid">
+          {salon.testimonials.length
+            ? salon.testimonials.map((review) => (
+                <article>
+                  <h3>{review.name}</h3>
+                  <p>{review.text}</p>
+                  <small>
+                    {review.city} · <bdi>{review.rating}/5</bdi>
+                  </small>
+                </article>
+              ))
+            : [1, 2, 3].map((n) => (
+                <article>
+                  <Icon name="quotes" />
+                  <h3>
+                    مساحة رأي زبون <bdi>{n}</bdi>
+                  </h3>
+                  <p>
+                    معاينة التطوير · ما كاين حتى رأي منشور. مخفي فالنسخة العامة.
+                  </p>
+                </article>
+              ))}
+        </div>
+      </section>
+    )}
+    <section class="container salon-section">
+      <h2 class="salon-title">الأسئلة الشائعة</h2>
+      <div class="salon-faq-layout">
+        <div class="salon-faq">
+          {salon.faq.map((item) => (
+            <details>
+              <summary>
+                {item.q}
+                <Icon name="plus" />
+              </summary>
+              <p>{item.a}</p>
+            </details>
+          ))}
+        </div>
+        <aside>
+          <Icon name="headset" />
+          <h3>
+            باقي محتار؟
+            <br />
+            حنا نعاونوك
+          </h3>
+          <p>تواصل معانا باش تتأكد من المعلومات وتختار على بينة.</p>
+          <button class="button salon-whatsapp" data-contact={salon.contact}>
+            <Icon name="whatsapp-logo" />
+            تواصل على واتساب
+          </button>
+        </aside>
+      </div>
+    </section>
+    <div class="container salon-final-reassurance">
+      <a href="/#magasins">
+        <Icon name="storefront" />
+        <span>مغازاتنا فالمغرب</span>
+      </a>
+      <button data-contact={salon.contact}>
+        <Icon name="headset" />
+        <span>سول قبل الاختيار</span>
+      </button>
+      <a href="#banquettes">
+        <Icon name="armchair" />
+        <span>اكتشف البانكيطات</span>
+      </a>
+    </div>
+  </main>
+  <Footer showBanner={false} />
+  <Dialogs />
+  <script>
+    import '../lib/salon';
+  </script>
+</Layout>

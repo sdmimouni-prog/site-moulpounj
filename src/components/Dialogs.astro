@@ -1,0 +1,34 @@
+---
+import Icon from './Icon.astro';
+---
+
+<dialog id="service-dialog" aria-labelledby="dialog-title">
+  <div class="dialog-heading">
+    <h2 id="dialog-title"></h2>
+    <button class="icon-button" data-close aria-label="Fermer la fenêtre">
+      <Icon name="x" />
+    </button>
+  </div>
+  <p id="dialog-description"></p>
+  <div id="dialog-body"></div>
+  <form method="dialog">
+    <button class="button button-light">Fermer</button>
+  </form>
+</dialog>
+<dialog id="search-dialog" aria-labelledby="search-title">
+  <div class="dialog-heading">
+    <h2 id="search-title">Rechercher un produit</h2>
+    <button class="icon-button" data-close aria-label="Fermer la recherche">
+      <Icon name="x" />
+    </button>
+  </div>
+  <label for="product-search">Modèle ou dimension</label>
+  <input
+    type="search"
+    id="product-search"
+    placeholder="Nom du modèle, 160 × 200…"
+  />
+  <div id="search-results" role="status">
+    Le catalogue validé n’est pas encore disponible.
+  </div>
+</dialog>

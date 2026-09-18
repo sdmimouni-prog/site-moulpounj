@@ -1,0 +1,37 @@
+---
+import Icon from './Icon.astro';
+interface Props {
+  src?: string | null;
+  alt: string;
+  icon?: string;
+  class?: string;
+  priority?: boolean;
+}
+const {
+  src,
+  alt,
+  icon = 'image',
+  class: className = '',
+  priority = false,
+} = Astro.props;
+---
+
+<div class={`media ${className}`}>
+  {src ? (
+    <img
+      src={src}
+      alt={alt}
+      width="1000"
+      height="750"
+      loading={priority ? 'eager' : 'lazy'}
+      decoding="async"
+      fetchpriority={priority ? 'high' : 'auto'}
+    />
+  ) : (
+    <div class="media-pending">
+      <Icon name={icon} />
+      <span>{alt}</span>
+      <small>Photo originale à fournir</small>
+    </div>
+  )}
+</div>

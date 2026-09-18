@@ -1,0 +1,7 @@
+---
+import ProductLanding from '../../components/product/ProductLanding.astro';
+import {productPages} from '../../data/product-pages';
+export function getStaticPaths(){return productPages.filter(p=>!['matelas-premium-35','oreiller-sublimya-visco'].includes(p.slug)).map(product=>({params:{slug:product.slug},props:{product}}));}
+const {product}=Astro.props;
+---
+<ProductLanding product={product}/>

@@ -1,0 +1,130 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import Icon from './Icon.astro';
+import NavigationLink from './NavigationLink.astro';
+import { footerGroups } from '../data/navigation';
+import { closingBenefits } from '../data/closing';
+import '../styles/closing.css';
+const { showBanner = true } = Astro.props;
+---
+
+{showBanner && (
+  <section
+    id="confort"
+    class="container closing-wrap"
+    aria-labelledby="final-title"
+  >
+    <div class="closing-scene">
+      <div class="closing-photo">
+        <img
+          src="/images/reference/sleep-restored.webp"
+          width="1200"
+          height="800"
+          loading="lazy"
+          alt="Instant de repos — visuel restauré à partir de la maquette"
+        />
+        <p aria-hidden="true">
+          Sweet
+          <br />
+          Dreams
+          <br />
+          Bigger
+          <br />
+          Tomorrows ♡
+        </p>
+      </div>
+      <div class="closing-orange" aria-hidden="true"></div>
+      <svg class="closing-leaves" viewBox="0 0 170 340" aria-hidden="true">
+        <path
+          d="M150 340Q95 180 128 28"
+          fill="none"
+          stroke="#923e1f"
+          stroke-width="4"
+        />
+        <g fill="#994021" opacity=".5">
+          <path d="M128 115Q64 66 89 11Q133 43 128 115Z" />
+          <path d="M124 152Q145 80 169 71Q179 120 124 152Z" />
+          <path d="M121 203Q60 158 42 116Q111 133 121 203Z" />
+          <path d="M127 244Q146 171 170 150Q180 218 127 244Z" />
+          <path d="M142 297Q77 279 50 226Q113 228 142 297Z" />
+        </g>
+      </svg>
+      <div class="closing-content">
+        <h2 id="final-title" lang="ar" dir="rtl">
+          نعس هاني… وخلي ظهرك يرتاح
+        </h2>
+        <p class="closing-subtitle" lang="ar" dir="rtl">
+          راحة اليوم… لحياة أجمل غداً
+        </p>
+        <div class="closing-benefits">
+          {closingBenefits.map((item, index) => (
+            <div style={`--benefit-delay:${450 + index * 110}ms`}>
+              <Icon name={item.icon} />
+              <span lang="ar" dir="rtl">
+                {item.text}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="closing-action">
+        <a class="button" href="#selection">
+          <span lang="ar" dir="rtl">
+            استافد دابا
+          </span>
+          <Icon name="arrow-right" />
+        </a>
+        <p aria-hidden="true">
+          <span>Moul Pounj ♡</span>
+          <span lang="ar" dir="rtl">
+            معاك دائماً
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+)}
+<footer class="footer footer-light">
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <a
+        href={Astro.url.pathname === '/' ? '#accueil' : '/'}
+        aria-label="Moul Pounj — retour en haut"
+      >
+        <Image
+          src={logo}
+          widths={[160, 320]}
+          sizes="160px"
+          format="webp"
+          quality={90}
+          alt="Moul Pounj"
+          width="994"
+          height="434"
+          loading="lazy"
+        />
+      </a>
+      <p lang="ar" dir="rtl">
+        راحة اليوم… لحياة أجمل غداً
+      </p>
+    </div>
+    {footerGroups.map((group) => (
+      <div class="footer-link-group">
+        <h3>{group.title}</h3>
+        {group.links.map((item) => (
+          <NavigationLink item={item} />
+        ))}
+      </div>
+    ))}
+  </div>
+  <div class="container footer-bottom">
+    <span class="footer-heart">
+      <Icon name="heart" /> Moul Pounj · Le confort, à la marocaine.
+    </span>
+    <span>© {new Date().getFullYear()} Moul Pounj · Aperçu local</span>
+  </div>
+</footer>
+
+<script>
+  import '../lib/closing';
+</script>

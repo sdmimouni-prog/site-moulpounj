@@ -1,0 +1,86 @@
+---
+import { premium35 as p } from '../../data/premium35';
+import Icon from '../Icon.astro';
+---
+
+<nav class="product-shell premium-breadcrumb" aria-label="Fil d’Ariane" dir="ltr">
+  <a href="/">Accueil</a><span>/</span><a href="/matelas">Nos matelas</a><span>/</span><span aria-current="page">Premium 35</span>
+</nav>
+<section class="product-hero product-shell" aria-labelledby="premium-title">
+  <div class="premium-media">
+    <img class="premium-main-photo" src={p.images.hero} alt="Matelas Premium 35 — photo du catalogue Moul Pounj" width="1000" height="800" fetchpriority="high" />
+    <span class="premium-photo-caption">Photo du catalogue source</span>
+  </div>
+  <div class="product-hero-inner">
+    <div class="product-hero-copy" dir="rtl">
+      <h1 id="premium-title">
+        مرتبة <bdi>Premium 35</bdi>
+      </h1>
+      <h2>
+        نعاس هاني...
+        <br />
+        وراحة كتستاهلها
+      </h2>
+      <p>
+        لحظات راحة على قياسك،
+        <br />
+        اكتشف تفاصيل مرتبتك الجديدة.
+      </p>
+      <p class="product-price">
+        ابتداءً من{' '}
+        <strong>
+          <bdi>1.490</bdi>
+        </strong>{' '}
+        درهم
+      </p>
+      <fieldset class="product-dimensions">
+        <legend>اختار القياس بالسنتيمتر</legend>
+        {p.dimensions.map((d) => (
+          <button type="button" data-dimension={d} aria-pressed="false">
+            <bdi>{d}</bdi>
+          </button>
+        ))}
+      </fieldset>
+      <p class="dimension-note">المقاسات والثمن من الموقع الأصلي · التوفر خاصو التأكيد</p>
+      <div class="product-hero-buttons">
+        <button class="button" data-product-order>
+          <Icon name="shopping-cart" />
+          {p.labels.order}
+        </button>
+        <a class="button button-light" href="/nos-magasins">
+          <Icon name="map-pin" />
+          {p.labels.stores}
+        </a>
+      </div>
+      <p
+        class="product-selection-status"
+        data-selection-status
+        aria-live="polite"
+      ></p>
+      <section id="product-inline-feedback" hidden aria-labelledby="product-feedback-title" tabindex="-1">
+        <h2 id="product-feedback-title"></h2>
+        <div id="product-feedback-body"></div>
+      </section>
+    </div>
+  </div>
+  <div class="product-reassurance" dir="rtl">
+    <div>
+      <Icon name="truck" />
+      <span>
+        التوصيل لمدينتك<small>المدة حسب التأكيد</small>
+      </span>
+    </div>
+    <div>
+      <Icon name="factory" />
+      <span>
+        تعرف على المصدر<small>معلومات قيد التأكيد</small>
+      </span>
+    </div>
+    <div>
+      <Icon name="wallet" />
+      <span>
+        طرق الأداء<small>تأكد قبل الطلب</small>
+      </span>
+    </div>
+  </div>
+</section>

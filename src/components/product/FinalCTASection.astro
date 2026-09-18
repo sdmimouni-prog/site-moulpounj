@@ -1,0 +1,32 @@
+---
+import { premium35 as p } from '../../data/premium35';
+import Icon from '../Icon.astro';
+---
+
+<section class="product-final product-shell product-section">
+  <img
+    src={p.images.lifestyle}
+    alt="لحظة هدوء وراحة"
+    width="1000"
+    height="900"
+    loading="lazy"
+  />
+  <div>
+    <h2>بداية حياة أفضل... كتبدا من نوم مريح</h2>
+    <p>
+      اكتشف مرتبة <bdi>Premium 35</bdi>
+      <br />
+      وتواصل مع مستشارنا للمساعدة.
+    </p>
+    <div class="product-final-actions">
+      <button class="button" data-product-order>
+        <Icon name="shopping-cart" />
+        {p.labels.order}
+      </button>
+      <button class="button button-light" data-product-contact>
+        <Icon name="whatsapp-logo" />
+        {p.labels.whatsapp}
+      </button>
+    </div>
+  </div>
+</section>

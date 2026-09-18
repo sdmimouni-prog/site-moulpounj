@@ -1,0 +1,117 @@
+---
+import Icon from './Icon.astro';
+import { choiceFields } from '../data/choice-guide';
+import '../styles/choice-guide.css';
+---
+
+<section id="conseils" class="container section" aria-labelledby="guide-title">
+  <form id="choice-guide" class="choice-panel">
+    <div class="choice-intro">
+      <h2 id="guide-title" lang="ar" dir="rtl">
+        ما عارفش آش <br />
+        تختار؟
+      </h2>
+      <p lang="ar" dir="rtl">
+        جاوب على هاد الأسئلة البسيطة <br />
+        ونعاونوك فالاختيار المناسب ليك
+      </p>
+    </div>
+    <div class="choice-fields">
+      {choiceFields.map((field, i) => (
+        <div class="choice-field">
+          <Icon name={field.icon} />
+          <label for={field.id} lang="ar" dir="rtl">
+            <bdi>{i + 1}.</bdi> {field.title}
+          </label>
+          <p id={`${field.id}-hint`} lang="ar" dir="rtl">
+            {field.question}
+          </p>
+          <div class="choice-select">
+            <select
+              id={field.id}
+              name={field.id}
+              required
+              aria-label={field.label}
+              aria-describedby={`${field.id}-hint`}
+              data-choice-select={field.id}
+            >
+              <option value="">اختر</option>
+              {field.options.map((option) => (
+                <option value={option.value}>{option.label}</option>
+              ))}
+            </select>
+            <Icon name="caret-down" />
+          </div>
+          {field.id === 'budget' && (
+            <div class="choice-custom" data-choice-custom="budget" hidden>
+              <label for="custom-budget">Votre budget maximum (MAD)</label>
+              <input
+                id="custom-budget"
+                name="budget"
+                type="number"
+                min="1"
+                max="1000000"
+                step="1"
+                inputmode="numeric"
+                placeholder="Ex. 4 000"
+                disabled
+              />
+            </div>
+          )}
+          {field.id === 'dimension' && (
+            <div class="choice-custom" data-choice-custom="dimension" hidden>
+              <label for="custom-dimension">Vos dimensions (cm)</label>
+              <input
+                id="custom-dimension"
+                name="dimension"
+                maxlength="60"
+                placeholder="Largeur × longueur"
+                disabled
+              />
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+    <div class="choice-action">
+      <button type="submit" class="button">
+        <span lang="ar" dir="rtl">
+          عاوني نختار
+        </span>
+        <Icon name="arrow-right" />
+      </button>
+      <div class="choice-signature" aria-hidden="true">
+        <span>
+          Moul Pounj <Icon name="heart" />
+        </span>
+        <span lang="ar" dir="rtl">
+          معاك دائماً
+        </span>
+      </div>
+    </div>
+    <div id="guide-result" class="choice-result" role="status" hidden></div>
+  </form>
+</section>
+<script>
+  document
+    .querySelectorAll<HTMLSelectElement>('[data-choice-select]')
+    .forEach((select) => {
+      select.addEventListener('change', () => {
+        select.classList.toggle('has-value', Boolean(select.value));
+        const custom = document.querySelector<HTMLElement>(
+          `[data-choice-custom="${select.dataset.choiceSelect}"]`,
+        );
+        if (!custom) return;
+        const input = custom.querySelector<HTMLInputElement>('input')!;
+        const isCustom = select.value === 'custom';
+        custom.hidden = !isCustom;
+        input.disabled = !isCustom;
+        input.required = isCustom;
+        // Only the selected preference is submitted, never the sentinel "custom".
+        if (isCustom) {
+          select.removeAttribute('name');
+          input.focus();
+        } else select.name = select.dataset.choiceSelect!;
+      });
+    });
+</script>

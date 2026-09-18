@@ -1,0 +1,17 @@
+---
+import { premium35 as p } from '../../data/premium35';
+import Icon from '../Icon.astro';
+---
+
+<section class="product-benefits product-shell" aria-label="مميزات المرتبة">
+  <div class="product-benefit-grid">
+    {p.benefits.map((item) => (
+      <article class="product-small-card">
+        <Icon name={item.icon} />
+        <h3>{item.title}</h3>
+        <p>{item.text}</p>
+      </article>
+    ))}
+  </div>
+  <p class="product-disclaimer">{p.labels.preview}</p>
+</section>

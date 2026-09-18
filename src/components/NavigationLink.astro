@@ -1,0 +1,31 @@
+---
+import { navigationHref } from '../lib/navigation-href';
+import type { NavigationLink } from '../data/navigation';
+interface Props {
+  item: NavigationLink;
+}
+const { item } = Astro.props;
+---
+
+{item.href ? (
+  <a
+    href={navigationHref(item.href, Astro.url.pathname, item.category)}
+    aria-current={
+      navigationHref(item.href, Astro.url.pathname, item.category)?.split('#')[0] ===
+      Astro.url.pathname
+        ? 'page'
+        : undefined
+    }
+    data-category-link={item.category}
+  >
+    {item.label}
+  </a>
+) : (
+  <button
+    type="button"
+    data-destination={item.destination}
+    data-contact={item.contact}
+  >
+    {item.label}
+  </button>
+)}

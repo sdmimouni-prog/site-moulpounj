@@ -1,0 +1,27 @@
+---
+import { productOfferEndsAt } from '../../data/product-offer';
+---
+<section class="product-countdown" data-offer-countdown data-ends-at={productOfferEndsAt} aria-label="Fin de l’offre" dir="ltr" lang="fr">
+  <p data-countdown-label>Fin de l’offre dans :</p>
+  <div class="product-countdown-grid" role="timer" aria-live="off">
+    {['Jours', 'Heures', 'Minutes', 'Secondes'].map(label => <div><strong data-countdown-unit>00</strong><span>{label}</span></div>)}
+  </div>
+  <noscript><p>Fin de l’offre : {new Date(productOfferEndsAt).toLocaleString('fr-FR', {timeZone:'Africa/Casablanca'})} (heure du Maroc).</p></noscript>
+</section>
+<script>
+  const timer = document.querySelector<HTMLElement>('[data-offer-countdown]');
+  if (timer) {
+    const end = Date.parse(timer.dataset.endsAt!);
+    const units = timer.querySelectorAll('[data-countdown-unit]');
+    const tick = () => {
+      const seconds = Math.max(0, Math.floor((end - Date.now()) / 1000));
+      const values = [Math.floor(seconds / 86400), Math.floor(seconds / 3600) % 24, Math.floor(seconds / 60) % 60, seconds % 60];
+      units.forEach((unit, index) => { unit.textContent = String(values[index]).padStart(2, '0'); });
+      if (!seconds) timer.querySelector('[data-countdown-label]')!.textContent = 'Cette offre est terminée';
+      return seconds;
+    };
+    if (tick()) {
+      const interval = window.setInterval(() => { if (!tick()) window.clearInterval(interval); }, 1000);
+    }
+  }
+</script>

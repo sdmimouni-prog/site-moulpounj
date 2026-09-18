@@ -1,0 +1,145 @@
+---
+import { heroSlides, heroReassurance } from '../data/hero';
+import Icon from './Icon.astro';
+---
+
+<section
+  class="showcase"
+  aria-label="Découvrez l’univers Moul Pounj"
+  aria-roledescription="carrousel"
+  data-carousel
+>
+  <div class="showcase-stage" aria-live="off">
+    {heroSlides.map((slide, index) => (
+      <article
+        class:list={['showcase-slide', { 'is-active': index === 0 }]}
+        data-slide={index}
+        role="group"
+        aria-roledescription="diapositive"
+        aria-label={`${index + 1} sur 3 — ${slide.label}`}
+        aria-hidden={index !== 0}
+        inert={index !== 0}
+      >
+        <div class={`showcase-photo showcase-photo-${slide.id}`}>
+          <img
+            src={slide.image}
+            alt={slide.alt}
+            width="2400"
+            height="1000"
+            loading={index === 0 ? 'eager' : 'lazy'}
+            fetchpriority={index === 0 ? 'high' : 'auto'}
+            decoding="async"
+          />
+        </div>
+        <div class="showcase-wash" aria-hidden="true"></div>
+        <div class="container showcase-content">
+          <div class="showcase-copy">
+            {index === 0 ? (
+              <h1 class="showcase-title" lang="ar" dir="rtl">
+                {slide.title}
+                <em>{slide.accent}</em>
+              </h1>
+            ) : (
+              <h2 class="showcase-title" lang="ar" dir="rtl">
+                {slide.title}
+                <em>{slide.accent}</em>
+              </h2>
+            )}
+            <p class="showcase-description" lang="ar" dir="rtl">
+              {slide.description}
+            </p>
+            <div class="showcase-actions">
+              <a
+                class="button showcase-primary"
+                href={slide.category === 'matelas' ? '/matelas' : slide.category === 'salon' ? '/salon-marocain' : '/produit/oreiller-sublimya-visco'}
+                
+              >
+                <span lang="ar" dir="rtl">
+                  {slide.cta}
+                </span>
+                <Icon name="arrow-right" />
+              </a>
+              <a class="button showcase-secondary" href="#magasins">
+                <Icon name="map-pin" />
+                <span lang="ar" dir="rtl">
+                  لقى أقرب <bdi>magasin</bdi>
+                </span>
+              </a>
+            </div>
+            <div class="showcase-reassurance">
+              {heroReassurance.map((item) => (
+                <span>
+                  <Icon name={item.icon} />
+                  <span lang="ar" dir="rtl">
+                    {item.text}
+                  </span>
+                </span>
+              ))}
+            </div>
+            <p class="showcase-signature" lang="ar" dir="rtl">
+              {slide.signature}
+            </p>
+          </div>
+          <p class="showcase-note">{slide.note}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+  <div class="showcase-controls container">
+    <div
+      class="showcase-pagination"
+      role="group"
+      aria-label="Choisir une diapositive"
+    >
+      {heroSlides.map((s, i) => (
+        <button
+          class:list={['showcase-dot', { 'is-active': i === 0 }]}
+          data-goto={i}
+          aria-label={`Afficher la diapositive ${i + 1} : ${s.label}`}
+          aria-current={i === 0 ? 'true' : undefined}
+        >
+          <span class="dot-track">
+            <span></span>
+          </span>
+          <span class="dot-name">{s.label}</span>
+        </button>
+      ))}
+    </div>
+    <div class="showcase-transport">
+      <span class="showcase-counter" aria-hidden="true">
+        <b data-current-slide>01</b>
+        <span>/ 03</span>
+      </span>
+      <button
+        class="showcase-control"
+        data-prev
+        aria-label="Diapositive précédente"
+      >
+        <Icon name="arrow-left" />
+      </button>
+      <button
+        class="showcase-control"
+        data-next
+        aria-label="Diapositive suivante"
+      >
+        <Icon name="arrow-right" />
+      </button>
+      <button
+        class="showcase-control showcase-pause"
+        data-pause
+        aria-label="Mettre le diaporama en pause"
+      >
+        <Icon name="pause" />
+      </button>
+    </div>
+  </div>
+  <p
+    class="sr-only"
+    data-carousel-status
+    aria-live="polite"
+    aria-atomic="true"
+  ></p>
+</section>
+<script>
+  import '../lib/carousel';
+</script>

@@ -1,0 +1,32 @@
+---
+import { navigationHref } from '../lib/navigation-href';
+import Icon from './Icon.astro';
+import type { MegaItem } from '../data/mega-menus';
+interface Props {
+  item: MegaItem;
+}
+const { item } = Astro.props;
+const Tag = item.href ? 'a' : 'button';
+---
+
+<Tag
+  class="mega-item"
+  href={navigationHref(item.href, Astro.url.pathname, item.category)}
+  type={item.href ? undefined : 'button'}
+  data-category-link={item.category}
+  data-destination={item.destination}
+  data-contact={item.contact}
+>
+  {item.image ? (
+    <img src={item.image} width="84" height="62" alt="" />
+  ) : (
+    <span class="mega-item-icon">
+      <Icon name={item.icon ?? 'arrow-right'} />
+    </span>
+  )}
+  <span class="mega-item-copy">
+    <strong>{item.label}</strong>
+    <small>{item.description}</small>
+  </span>
+  <Icon name="caret-right" />
+</Tag>

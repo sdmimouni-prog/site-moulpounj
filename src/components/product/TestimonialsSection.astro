@@ -1,0 +1,44 @@
+---
+import Icon from '../Icon.astro';
+import type { ProductPage } from '../../data/product-pages';
+interface Props { reviews?: ProductPage['reviews'] }
+const { reviews = [] } = Astro.props;
+---
+
+<section class="product-shell product-section" aria-labelledby="product-testimonials-title">
+  <h2 id="product-testimonials-title" class="product-section-title">أشنو قالو علينا الزبناء</h2>
+  {reviews.length === 0 && <p class="product-disclaimer">Aperçu des témoignages · Aucun avis client publié pour ce produit.</p>}
+  <div class="product-testimonials">
+    {reviews.map(review => (
+      <article class="product-review">
+        <div class="product-review-head"><h3>{review.name}</h3></div>
+        <p aria-label={`${review.rating} sur 5`}>{review.rating} / 5</p>
+        <blockquote>{review.text}</blockquote>
+      </article>
+    ))}
+    {(reviews.length ? [] : [1, 2, 3]).map((n) => (
+      <article class="product-review">
+        <div class="product-review-head">
+          <img
+            src={`/images/reference/review-portrait-${n}.webp`}
+            alt="صورة توضيحية من التصميم، ليست شهادة زبون"
+            width="80"
+            height="80"
+            loading="lazy"
+          />
+          <div>
+            <h3>تجربة زبون</h3>
+            <span>معاينة · ماشي رأي حقيقي</span>
+          </div>
+        </div>
+        <p>
+          هنا غادي تلقاو آراء الزبناء من بعد التأكد منها والموافقة على نشرها.
+        </p>
+        <div class="product-review-meta">
+          <Icon name="map-pin" />
+          المدينة والتقييم قيد الإضافة
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

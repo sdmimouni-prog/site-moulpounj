@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Dialogs from '../components/Dialogs.astro';
+import Icon from '../components/Icon.astro';
+import { adviceCategories, adviceArticles, featuredGuide } from '../data/advice';
+import '../styles/advice.css';
+---
+<Layout language="ar" title="نصائح مول البونج | Conseils Moul Pounj" description="نصائح عملية لاختيار الماتلا، البانكيطة والوسادة، وفهم القياسات والعناية.">
+<Header />
+<main id="contenu" class="advice-page" dir="rtl">
+  <section class="advice-hero">
+    <img src="/images/advice/hero.webp" alt="كتب وتاسة فوق سرير في غرفة دافئة — صورة توضيحية" width="1536" height="1024" fetchpriority="high" />
+    <div class="advice-wrap"><div class="advice-hero-copy"><h1>قبل ما تشري...<br /><em>عرف شنو يناسبك.</em></h1><p>نصائح بسيطة باش تختار الماتلا، البانكيطة<br />والوسادة اللي يناسبوك.</p>
+    <form role="search" id="advice-search-form"><label class="sr-only" for="advice-search">البحث في النصائح</label><Icon name="magnifying-glass"/><input id="advice-search" type="search" placeholder="على شنو كتقلب؟" autocomplete="off" /></form><small>مثلاً: الماتلا، القياسات، العناية، الفرق بين الموس والروسور...</small></div></div>
+  </section>
+  <div class="advice-wrap">
+    <nav class="advice-filters" aria-label="مواضيع النصائح">{adviceCategories.map((c,i)=><button data-advice-filter={c.id} aria-pressed={i===0}><Icon name={c.icon}/>{c.label}</button>)}</nav>
+    <section class="advice-featured-section"><h2 class="advice-title">دليل اليوم</h2><div class="advice-featured">
+      <div class="advice-featured-topics">{[{icon:'stack',text:'أنواع الماتلات'},{icon:'heart',text:'مستوى الراحة'},{icon:'ruler',text:'القياسات المناسبة'},{icon:'lightbulb',text:'نصائح قبل الشراء'}].map(t=><span><Icon name={t.icon}/>{t.text}</span>)}</div>
+      <div class="advice-featured-copy"><h3>{featuredGuide.title}</h3><p>{featuredGuide.summary}</p><a class="advice-button" href="/conseils/comment-choisir-son-matelas">قرا الدليل <Icon name="arrow-left"/></a></div>
+      <div class="advice-featured-photo"><img src="/images/reference/category-matelas.webp" alt="مرتبة في غرفة نوم — صورة توضيحية" width="640" height="420"/><span>دليل شامل</span></div>
+    </div></section>
+    <section id="articles" class="advice-articles"><h2 class="advice-title">جميع النصائح</h2><p class="advice-subtitle">مقالات ودلائل عملية باش تعاونك تختار براحة.</p>
+      <div class="advice-toolbar"><label for="advice-sort">ترتيب حسب :</label><select id="advice-sort"><option value="default">المقترحة</option><option value="title">العنوان</option></select><span id="advice-results" role="status" aria-live="polite"></span></div>
+      <div class="advice-grid" dir="ltr">{adviceArticles.map((article,index)=><article id={article.id} class="advice-card" data-category={article.category} data-search={`${article.title} ${article.summary} ${article.search}`} data-title={article.title} data-order={index}>
+        <button class="advice-card-image" data-open-guide={article.id} aria-label={article.title}><img src={article.image} alt="" width="480" height="340" loading="lazy"/><span>{article.label}</span></button><div dir="rtl"><h3><button data-open-guide={article.id}>{article.title}</button></h3><p>{article.summary}</p><button class="advice-read" data-open-guide={article.id}>اقرأ المزيد <Icon name="arrow-left"/></button></div>
+      </article>)}</div><p id="advice-empty" hidden>ما لقيناش نصيحة بهاد البحث. جرب كلمة أخرى أو اختار جميع النصائح.</p>
+    </section>
+    <section class="advice-videos"><h2 class="advice-title">شوف وفهم بسهولة</h2><p class="advice-subtitle">الفيديوهات الإرشادية قيد الإضافة. تقدر دابا تقرا الدلائل ديالنا.</p><div class="advice-video-grid">{[adviceArticles[0],adviceArticles[1],adviceArticles[3],adviceArticles[2]].map(article=><button data-open-guide={article.id}><div><img src={article.image} alt="" loading="lazy" width="600" height="350"/><span><Icon name="book-open"/></span></div><strong>{article.title}</strong><small>قرا الدليل</small></button>)}</div></section>
+    <section class="advice-help"><div><h2>باقي محتار؟ حنا نعاونوك تختار.</h2><p>تواصل مع فريقنا على واتساب باش تلقى المنتج اللي يناسب احتياجاتك.</p><div class="advice-help-actions"><button class="advice-whatsapp" data-contact="Bonjour, je souhaite être conseillé pour choisir ma literie."><Icon name="whatsapp-logo"/>تواصل على واتساب</button><a href="/matelas" class="advice-outline">اكتشف الماتلات <Icon name="bed"/></a></div></div></section>
+  </div>
+  <dialog id="advice-reader" aria-labelledby="advice-reader-title"><button class="advice-reader-close" aria-label="إغلاق الدليل"><Icon name="x"/></button><div id="advice-reader-content"></div></dialog>
+  <script id="advice-content" type="application/json" set:html={JSON.stringify([featuredGuide,...adviceArticles]).replace(/</g,'\\u003c')} />
+</main><Footer showBanner={false}/><Dialogs/>
+</Layout>
+<script>import '../lib/advice';</script>

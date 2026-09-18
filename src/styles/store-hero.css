@@ -1,0 +1,194 @@
+.locator-hero {
+  min-height: 0;
+  background: #fcf9f5;
+  isolation: isolate;
+}
+.locator-slides {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.locator-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.75s ease;
+  pointer-events: none;
+}
+.locator-slide.is-active {
+  opacity: 1;
+}
+.locator-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.025);
+  transition: transform 4s ease-out;
+}
+.locator-slide.is-active img {
+  transform: scale(1);
+}
+.locator-slide.interior img {
+  width: 68%;
+  object-position: 50% 55%;
+  mask-image: linear-gradient(to right, #000 70%, transparent);
+}
+.locator-hero > .container {
+  min-height: clamp(330px, 29.3vw, 430px);
+  align-items: center;
+  justify-content: flex-end;
+}
+.locator-hero-copy {
+  width: 37%;
+  max-width: 510px;
+  padding: 25px 0 36px;
+}
+.locator-hero h1 {
+  font-size: clamp(30px, 3.4vw, 47px);
+  font-weight: 800;
+  line-height: 1.5;
+  margin: 0 0 8px;
+  color: #ff5219;
+  white-space: nowrap;
+}
+.locator-hero-copy > p {
+  font-size: clamp(15px, 1.55vw, 22px);
+  line-height: 1.7;
+  color: #243047;
+  margin: 0 0 18px;
+}
+.locator-hero .locator-search {
+  padding: 10px 13px;
+  min-height: 48px;
+  margin-bottom: 10px;
+  border-color: #e2ddd7;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px #29221504;
+}
+.locator-search input {
+  font-size: 14px;
+}
+.locator-hero #locator-geolocate {
+  background: #ff591b;
+  border-radius: 8px;
+  padding: 8px 26px;
+  min-width: 57%;
+  font-size: 16px;
+  min-height: 46px;
+}
+.locator-hero #locator-geo-status:empty {
+  display: none;
+}
+.locator-slide-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 2px 5px;
+  border-radius: 24px;
+  background: #fff9;
+}
+.locator-slide-controls button {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #99431f;
+}
+.locator-slide-controls button:hover {
+  background: #ffede2;
+}
+.locator-slide-controls .locator-slide-dot {
+  width: 24px;
+}
+.locator-slide-dot span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #bdb3a9;
+  transition: width 0.25s;
+}
+.locator-slide-dot[aria-pressed='true'] span {
+  width: 17px;
+  border-radius: 4px;
+  background: #f75b22;
+}
+@media (max-width: 1000px) and (min-width: 768px) {
+  .locator-hero-copy {
+    width: 40%;
+  }
+  .locator-hero h1 {
+    font-size: 30px;
+  }
+  .locator-hero > .container {
+    min-height: 310px;
+  }
+  .locator-hero-copy > p {
+    font-size: 15px;
+  }
+  .locator-hero .locator-search input {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .locator-slides {
+    height: 225px;
+    position: relative;
+    z-index: 0;
+  }
+  .locator-slide.facade img {
+    width: 155%;
+    max-width: none;
+    object-position: left center;
+  }
+  .locator-slide.interior img {
+    width: 100%;
+    mask-image: none;
+    object-position: center;
+  }
+  .locator-hero > .container {
+    min-height: 0;
+  }
+  .locator-hero-copy {
+    width: 100%;
+    max-width: none;
+    padding: 20px 0 25px;
+  }
+  .locator-hero h1 {
+    font-size: 32px;
+    white-space: normal;
+  }
+  .locator-hero-copy > p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .locator-slide-controls {
+    top: 178px;
+    bottom: auto;
+  }
+  .locator-slide-controls button {
+    width: 40px;
+    height: 40px;
+  }
+  .locator-slide-controls .locator-slide-dot {
+    width: 32px;
+  }
+  .locator-hero #locator-geolocate {
+    width: 100%;
+    min-height: 48px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .locator-slide,
+  .locator-slide img,
+  .locator-slide-dot span {
+    transition: none;
+    transform: none;
+  }
+}

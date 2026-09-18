@@ -1,0 +1,40 @@
+---
+import { premium35 as p } from '../../data/premium35';
+import Icon from '../Icon.astro';
+---
+
+<section class="product-story product-shell product-section">
+  <figure>
+    <img
+      src={p.images.detail}
+      alt="صورة مرتبة Premium 35 من الموقع الأصلي"
+      width="675"
+      height="465"
+      loading="lazy"
+    />
+    <figcaption>تفاصيل كتستاهل تشوفها عن قرب</figcaption>
+  </figure>
+  <div class="product-editorial">
+    <h2>راحة كل ليلة... وبداية زوينة كل نهار</h2>
+    <p>
+      تعرف على مرتبة <bdi>Premium 35</bdi>، وخذ الوقت باش تختار الراحة اللي
+      كتليق بغرفة نومك وبالاحتياجات ديالك.
+    </p>
+    <p>
+      شوف تفاصيل التصميم، اختار القياس اللي باغي، وتواصل مع مستشارنا باش تتأكد
+      من المواصفات والتوفر والثمن النهائي قبل الطلب.
+    </p>
+    <div class="product-story-benefits">
+      {[
+        { icon: 'moon', text: 'لحظات هدوء' },
+        { icon: 'heart', text: 'راحة على ذوقك' },
+        { icon: 'sun', text: 'بداية نهار زوينة' },
+      ].map((i) => (
+        <div>
+          <Icon name={i.icon} />
+          <span>{i.text}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

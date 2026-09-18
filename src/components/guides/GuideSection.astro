@@ -1,0 +1,7 @@
+---
+const { section, number } = Astro.props;
+---
+<section id={section.id} class="guide-section" aria-labelledby={`heading-${section.id}`} data-guide-section>
+ <h2 id={`heading-${section.id}`}><span>{number}</span>{section.title}</h2>
+ <slot />
+</section>

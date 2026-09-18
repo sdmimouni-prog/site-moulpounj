@@ -1,0 +1,160 @@
+---
+import { directoryStores, storeNetwork } from '../data/store-network';
+import { storeHighlights } from '../data/store-section';
+import Icon from './Icon.astro';
+import '../styles/store-section.css';
+import '../styles/store-map.css';
+const cities = [...new Set(directoryStores.map((store) => store.city))].sort();
+---
+
+<section id="magasins" class="container section" aria-labelledby="stores-title">
+  <div class="network-panel network-live">
+    <div class="network-copy" data-network-reveal>
+      <p class="network-eyebrow">
+        NOS MAGASINS <span></span>
+      </p>
+      <h2 id="stores-title" lang="ar" dir="rtl">
+        قريبين ليك <em>مول البونج</em>
+      </h2>
+      <p class="network-description" lang="ar" dir="rtl">
+        لقى أقرب <bdi>magasin</bdi> مول البونج ليك، واكتشف عالم الراحة ديالنا.
+      </p>
+      <button
+        class="button network-cta"
+        data-store-toggle
+        aria-expanded="false"
+        aria-controls="store-finder"
+      >
+        <span lang="ar" dir="rtl">
+          شوف الماگازات
+        </span>
+        <Icon name="arrow-right" />
+      </button>
+      <div class="network-highlights">
+        {storeHighlights.map((item) => (
+          <div>
+            <Icon name={item.icon} />
+            <h3 lang="ar" dir="rtl">
+              {item.title}
+            </h3>
+            <p lang="ar" dir="rtl">
+              {item.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div
+      class="store-map-wrap"
+      data-network-reveal
+      style="--reveal-delay:120ms"
+    >
+      <div
+        id="store-map"
+        aria-label="Carte interactive des implantations Moul Pounj"
+      ></div>
+      <p class="store-map-status" role="status">
+        Chargement de la carte…
+      </p>
+    </div>
+    <div
+      class="network-visual"
+      data-network-reveal
+      style="--reveal-delay:240ms"
+    >
+      <img
+        src="/images/reference/store-restored.webp"
+        alt="Façade Moul Pounj — visuel de la maquette"
+        width="1000"
+        height="1250"
+        loading="lazy"
+      />
+      <div class="network-photo-glow" aria-hidden="true"></div>
+      <div class="network-badge">
+        <span lang="ar" dir="rtl">
+          قريبين ليك
+        </span>
+        <strong>{storeNetwork.reportedTotal}</strong>
+        <span lang="ar" dir="rtl">
+          متجر فالمغرب
+        </span>
+      </div>
+    </div>
+  </div>
+  <p class="store-source">
+    {directoryStores.length} fiches issues du{' '}
+    <a href={storeNetwork.source} target="_blank" rel="noopener noreferrer">
+      site officiel
+    </a>{' '}
+    · {storeNetwork.reportedTotal - directoryStores.length} magasins restent à
+    renseigner pour compléter le réseau de {storeNetwork.reportedTotal}.
+  </p>
+  <div id="store-finder" class="store-finder store-directory" hidden>
+    <h3>Trouver votre magasin</h3>
+    <div class="store-filters">
+      <label>
+        Ville
+        <select id="store-city-filter">
+          <option value="">Toutes les villes</option>
+          {cities.map((city) => (
+            <option value={city}>{city}</option>
+          ))}
+        </select>
+      </label>
+      <label>
+        Nom ou adresse
+        <input
+          type="search"
+          id="store-search"
+          placeholder="Rechercher un magasin…"
+          autocomplete="off"
+        />
+      </label>
+    </div>
+    <p id="store-results-count" role="status">
+      {directoryStores.length} magasins
+    </p>
+    <div class="store-results-grid">
+      {directoryStores.map((store) => (
+        <article
+          class="store-directory-card"
+          data-store-card
+          data-city={store.city}
+          data-search={`${store.name} ${store.city} ${store.address}`}
+        >
+          <p class="store-location">
+            <Icon name="map-pin" />
+            {store.city}
+          </p>
+          <h4>{store.name}</h4>
+          <address>{store.address}</address>
+          <p class="store-hours">{store.hours}</p>
+          <div class="store-card-actions">
+            <a href={store.telephoneUrl}>
+              <Icon name="phone" />
+              {store.phone}
+            </a>
+            <a href={store.mapUrl} target="_blank" rel="noopener noreferrer">
+              Itinéraire <Icon name="arrow-up-right" />
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+    <p data-store-empty hidden>
+      Aucun magasin publié ne correspond à cette recherche.
+    </p>
+  </div>
+  <noscript>
+    <style>
+      #store-finder[hidden] {
+        display: block;
+      }
+    </style>La carte nécessite JavaScript. Les adresses et itinéraires restent
+    accessibles ci-dessous.
+  </noscript>
+</section>
+<script>
+  import '../lib/store-section';
+  import '../lib/store-map';
+</script>

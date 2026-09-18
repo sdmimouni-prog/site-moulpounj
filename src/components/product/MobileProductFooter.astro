@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/logo.png';
+---
+
+<footer class="product-footer product-shell">
+  <div class="product-footer-brand">
+    <a href="/" aria-label="الرئيسية">
+      <Image
+        src={logo}
+        width={994}
+        height={434}
+        widths={[160, 320]}
+        sizes="140px"
+        format="webp"
+        alt="مول البونج — Moul Pounj"
+      />
+    </a>
+    <p>راحة اليوم... لحياة أجمل غداً</p>
+  </div>
+  <div>
+    <h3>روابط مفيدة</h3>
+    <a href="/#selection">جميع المراتب</a>
+    <a href="/#magasins">مواقع المغازات</a>
+    <a href="#product-faq">الأسئلة المتكررة</a>
+    <button data-product-contact>تواصل معنا</button>
+  </div>
+  <div>
+    <h3>تابعونا</h3>
+    <p>الروابط الرسمية قريباً</p>
+    <h3>طرق الأداء</h3>
+    <p>قيد التأكيد قبل الطلب</p>
+  </div>
+  <p class="product-copyright">
+    © {new Date().getFullYear()} Moul Pounj · معاينة محلية
+  </p>
+</footer>

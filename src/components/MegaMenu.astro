@@ -1,0 +1,64 @@
+---
+import { navigationHref } from '../lib/navigation-href';
+import type { MegaMenu } from '../data/mega-menus';
+import MegaMenuItem from './MegaMenuItem.astro';
+import Icon from './Icon.astro';
+interface Props {
+  menu: MegaMenu;
+}
+const { menu } = Astro.props;
+---
+
+<div
+  id={`nav-${menu.id}`}
+  class="nav-panel mega-panel"
+  aria-labelledby={`trigger-${menu.id}`}
+  hidden
+>
+  <div class="mega-column mega-discover">
+    <h2>{menu.heading}</h2>
+    {menu.discover
+      .filter((item) => item.enabled !== false)
+      .map((item) => (
+        <MegaMenuItem item={item} />
+      ))}
+  </div>
+  <div class="mega-column">
+    <h2>Bien choisir</h2>
+    {menu.advice
+      .filter((item) => item.enabled !== false)
+      .map((item) => (
+        <MegaMenuItem item={item} />
+      ))}
+  </div>
+  <div class="mega-promo">
+    <img
+      src={menu.visual.image}
+      alt={menu.visual.alt}
+      width="600"
+      height="430"
+    />
+    <div class="mega-promo-copy">
+      <p
+        class:list={['mega-promo-title', { 'mega-arabic': menu.visual.arabic }]}
+        lang={menu.visual.arabic ? 'ar' : 'fr'}
+        dir={menu.visual.arabic ? 'rtl' : 'ltr'}
+      >
+        {menu.visual.title} <em>{menu.visual.accent}</em>
+      </p>
+      <p class="mega-promo-description">{menu.visual.description}</p>
+      <a
+        class="button"
+        href={navigationHref(
+          menu.visual.cta.href,
+          Astro.url.pathname,
+          menu.visual.cta.category,
+        )}
+        data-category-link={menu.visual.cta.category}
+      >
+        {menu.visual.cta.label}
+        <Icon name="arrow-right" />
+      </a>
+    </div>
+  </div>
+</div>

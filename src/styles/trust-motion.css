@@ -1,0 +1,197 @@
+.trust-entrance {
+  min-width: 0;
+}
+.trust-card {
+  height: 100%;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #fff;
+}
+.trust-card > .ph {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.trust-card::before {
+  content: '';
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  left: 50%;
+  top: -5px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffdcc2 0%, #fff1e5 45%, transparent 72%);
+  opacity: 0;
+  transform: translateX(-50%) scale(0.55);
+  z-index: -1;
+  pointer-events: none;
+}
+.trust-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #ffbd89, #f45b24, #ffbd89);
+  transform: scaleX(0);
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .trust-entrance.awaiting-entry {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+  .trust-entrance.trust-arrived {
+    animation: trust-arrival 0.72s cubic-bezier(0.2, 0.75, 0.2, 1)
+      var(--entry-delay, 0ms) both;
+  }
+  .trust-arrived .trust-card > .ph {
+    animation: trust-icon-arrival 0.8s cubic-bezier(0.2, 0.8, 0.25, 1)
+      calc(var(--entry-delay, 0ms) + 140ms) backwards;
+  }
+  .trust-card {
+    transition:
+      transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+      border-color 0.35s,
+      box-shadow 0.4s,
+      background 0.4s;
+  }
+  .trust-card::before {
+    transition:
+      opacity 0.45s,
+      transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .trust-card::after {
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .trust-card h3 {
+    transition: color 0.3s;
+  }
+  @keyframes trust-arrival {
+    from {
+      opacity: 0;
+      transform: translateY(28px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  @keyframes trust-icon-arrival {
+    from {
+      opacity: 0;
+      transform: translateY(12px) rotate(-12deg) scale(0.75);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .trust-card:hover {
+    transform: translateY(-7px);
+    border-color: #edb598;
+    background: #fffdf9;
+    box-shadow: 0 18px 35px -16px #af612e42;
+  }
+  .trust-card:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.25);
+  }
+  .trust-card:hover::after {
+    transform: scaleX(1);
+  }
+  .trust-card:hover h3 {
+    color: var(--orange-dark);
+  }
+  .trust-card[data-trust-icon='tag']:hover > .ph {
+    animation: trust-tag 0.8s ease-in-out both;
+  }
+  .trust-card[data-trust-icon='shield-check']:hover > .ph {
+    animation: trust-shield 0.75s ease-out both;
+  }
+  .trust-card[data-trust-icon='storefront']:hover > .ph {
+    animation: trust-store 0.8s ease-out both;
+  }
+  .trust-card[data-trust-icon='headset']:hover > .ph {
+    animation: trust-headset 0.85s ease-in-out both;
+  }
+  @keyframes trust-tag {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-17deg) scale(1.12);
+    }
+    55% {
+      transform: rotate(10deg) scale(1.12);
+    }
+    80% {
+      transform: rotate(-4deg);
+    }
+  }
+  @keyframes trust-shield {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    35% {
+      transform: scale(1.2);
+    }
+    65% {
+      transform: scale(0.95);
+    }
+  }
+  @keyframes trust-store {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    35% {
+      transform: translateY(-9px);
+    }
+    65% {
+      transform: translateY(2px);
+    }
+    82% {
+      transform: translateY(-3px);
+    }
+  }
+  @keyframes trust-headset {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+    20% {
+      transform: rotate(-13deg);
+    }
+    40% {
+      transform: rotate(13deg);
+    }
+    60% {
+      transform: rotate(-8deg);
+    }
+    80% {
+      transform: rotate(4deg);
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trust-entrance,
+  .trust-card,
+  .trust-card > .ph,
+  .trust-card::before,
+  .trust-card::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none;
+  }
+  .trust-entrance {
+    opacity: 1 !important;
+  }
+}

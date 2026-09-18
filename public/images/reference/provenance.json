@@ -1,0 +1,156 @@
+{
+  "hero": {
+    "source": "/Users/salaheddinemimouni/Downloads/ChatGPT Image Sep 17, 2026, 08_20_05 PM (1).png",
+    "crop": [
+      835,
+      355,
+      1510,
+      820
+    ],
+    "size": [
+      675,
+      465
+    ],
+    "purpose": "Visual preview only; not validated catalog data"
+  },
+  "category-matelas": {
+    "source": "/Users/salaheddinemimouni/Downloads/ChatGPT Image Sep 17, 2026, 08_20_06 PM (2).png",
+    "crop": [
+      42,
+      310,
+      424,
+      584
+    ],
+    "size": [
+      382,
+      274
+    ],
+    "purpose": "Visual preview only; not validated catalog data"
+  },
+  "category-salon": {
+    "source": "/Users/salaheddinemimouni/Downloads/ChatGPT Image Sep 17, 2026, 08_20_06 PM (2).png",
+    "crop": [
+      451,
+      310,
+      823,
+      584
+    ],
+    "size": [
+      372,
+      274
+    ],
+    "purpose": "Visual preview only; not validated catalog data"
+  },
+  "category-oreillers": {
+    "source": "/Users/salaheddinemimouni/Downloads/ChatGPT Image Sep 17, 2026, 08_20_06 PM (2).png",
+    "crop": [
+      850,
+      310,
+      1221,
+      584
+    ],
+    "size": [
+      371,
+      274
+    ],
+    "purpose": "Visual preview only; not validated catalog data"
+  },
+  "category-magasins": {
+    "source": "/Users/salaheddinemimouni/Downloads/ChatGPT Image Sep 17, 2026, 08_20_06 PM (2).png",
+    "crop": [
+      1249,
+      310,
+      1630,
+      584
+    ],
+    "size": [
+      381,
+      274
+    ],
+    "purpose": "Visual preview only; not validated catalog data"
+  },
+  "store": {
+    "source": "/Users/salaheddinemimouni/Downloads/ChatGPT Image Sep 17, 2026, 08_19_47 PM (1).png",
+    "crop": [
+      1098,
+      212,
+      1623,
+      535
+    ],
+    "size": [
+      525,
+      323
+    ],
+    "purpose": "Visual preview only; not validated catalog data"
+  },
+  "banner": {
+    "source": "/Users/salaheddinemimouni/Downloads/ChatGPT Image Sep 17, 2026, 08_19_47 PM (3).png",
+    "crop": [
+      246,
+      150,
+      595,
+      524
+    ],
+    "size": [
+      349,
+      374
+    ],
+    "purpose": "Visual preview only; not validated catalog data"
+  },
+  "product-1": {
+    "source": "/Users/salaheddinemimouni/Downloads/ChatGPT Image Sep 17, 2026, 08_20_16 PM.png",
+    "crop": [
+      52,
+      750,
+      243,
+      824
+    ],
+    "size": [
+      191,
+      74
+    ],
+    "purpose": "Visual preview only; not validated catalog data"
+  },
+  "product-2": {
+    "source": "/Users/salaheddinemimouni/Downloads/ChatGPT Image Sep 17, 2026, 08_20_16 PM.png",
+    "crop": [
+      271,
+      749,
+      456,
+      824
+    ],
+    "size": [
+      185,
+      75
+    ],
+    "purpose": "Visual preview only; not validated catalog data"
+  },
+  "product-3": {
+    "source": "/Users/salaheddinemimouni/Downloads/ChatGPT Image Sep 17, 2026, 08_20_16 PM.png",
+    "crop": [
+      488,
+      749,
+      674,
+      824
+    ],
+    "size": [
+      186,
+      75
+    ],
+    "purpose": "Visual preview only; not validated catalog data"
+  },
+  "product-4": {
+    "source": "/Users/salaheddinemimouni/Downloads/ChatGPT Image Sep 17, 2026, 08_20_16 PM.png",
+    "crop": [
+      705,
+      749,
+      889,
+      824
+    ],
+    "size": [
+      184,
+      75
+    ],
+    "purpose": "Visual preview only; not validated catalog data"
+  }
+}

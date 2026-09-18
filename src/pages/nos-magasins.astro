@@ -1,0 +1,281 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Dialogs from '../components/Dialogs.astro';
+import Icon from '../components/Icon.astro';
+import { locatorStores, cityArabic } from '../data/store-locator';
+import '../styles/locator.css';
+import { storeHeroSlides } from '../data/store-hero';
+import '../styles/store-hero.css';
+const cities = [...new Set(locatorStores.map((s) => s.city))].sort();
+---
+
+<Layout
+  language="ar"
+  title="Nos magasins — Moul Pounj"
+  description="Trouvez votre magasin Moul Pounj, ses coordonnées et son itinéraire."
+>
+  <Header />
+  <main id="contenu" class="locator-page">
+    <section
+      class="locator-hero"
+      aria-roledescription="carrousel"
+      aria-label="Découvrez Moul Pounj"
+    >
+      <div class="locator-slides" id="locator-slides">
+        {storeHeroSlides.map((slide, index) => (
+          <div
+            class:list={[
+              'locator-slide',
+              slide.kind,
+              { 'is-active': index === 0 },
+            ]}
+            aria-hidden={index !== 0}
+          >
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              width="1536"
+              height="512"
+              loading={index === 0 ? 'eager' : 'lazy'}
+              fetchpriority={index === 0 ? 'high' : 'auto'}
+            />
+          </div>
+        ))}
+      </div>
+      <div class="container">
+        <div class="locator-hero-copy" dir="rtl">
+          <h1>الراحة قريبة ليك.</h1>
+          <p>
+            لقى أقرب مغازة ديال مول البونج،
+            <br /> وجي تعرّف على الموديلات عن قرب.
+          </p>
+          <label class="locator-search">
+            <Icon name="magnifying-glass" />
+            <span class="sr-only">دخل المدينة أو الحي ديالك</span>
+            <input
+              id="locator-query"
+              type="search"
+              placeholder="دخل المدينة أو الحي ديالك"
+              autocomplete="off"
+            />
+          </label>
+          <button class="button" id="locator-geolocate">
+            <Icon name="crosshair" /> لقى الأقرب ليا
+          </button>
+          <p id="locator-geo-status" role="status"></p>
+        </div>
+      </div>
+      <div class="locator-slide-controls" aria-label="Commandes du diaporama">
+        <button data-store-slide-prev aria-label="Image précédente">
+          <Icon name="caret-left" />
+        </button>
+        {storeHeroSlides.map((_slide, index) => (
+          <button
+            class="locator-slide-dot"
+            data-store-slide={index}
+            aria-label={`Afficher l’image ${index + 1}`}
+            aria-pressed={index === 0}
+            aria-controls="locator-slides"
+          >
+            <span></span>
+          </button>
+        ))}
+        <button data-store-slide-next aria-label="Image suivante">
+          <Icon name="caret-right" />
+        </button>
+        <button
+          data-store-slide-pause
+          aria-label="Mettre le diaporama en pause"
+          aria-pressed="false"
+        >
+          <Icon name="pause" />
+        </button>
+      </div>
+    </section>
+    <div class="container locator-benefits" dir="rtl">
+      {[
+        ['map-pin', 'قلب حسب المدينة', 'لقى عنوان المغازة'],
+        ['phone', 'تواصل قبل الزيارة', 'تأكد من الموديل اللي باغي'],
+        ['armchair', 'اكتشف عالمنا', 'ماتلا وصالون مغربي'],
+        ['storefront', 'معلومات المغازات', 'العناوين وأرقام التواصل'],
+      ].map(([icon, title, body]) => (
+        <div>
+          <Icon name={icon} />
+          <span>
+            <strong>{title}</strong>
+            <small>{body}</small>
+          </span>
+        </div>
+      ))}
+    </div>
+    <section class="container locator-section" aria-labelledby="locator-title">
+      <header class="locator-heading" dir="rtl">
+        <h2 id="locator-title">مغازاتنا</h2>
+        <p>اختار المدينة أو استعمل موقعك باش تلقى أقرب مغازة.</p>
+      </header>
+      <div class="locator-toolbar">
+        <div class="locator-tabs">
+          <button data-locator-view="list" aria-pressed="true">
+            <Icon name="list" /> لائحة المغازات
+          </button>
+          <button data-locator-view="map" aria-pressed="false">
+            <Icon name="map-trifold" /> الخريطة
+          </button>
+        </div>
+        <label dir="rtl">
+          <span class="sr-only">المدينة</span>
+          <select id="locator-city">
+            <option value="">جميع المدن</option>
+            {cities.map((c) => (
+              <option value={c}>
+                {cityArabic[c] ? `${cityArabic[c]} · ${c}` : c}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+      <div class="locator-results-meta" dir="rtl">
+        <p id="locator-count" role="status">
+          {locatorStores.length} مغازة
+        </p>
+        <button id="locator-reset">مسح البحث</button>
+      </div>
+      <div class="locator-grid" data-view="list">
+        <div class="locator-list" id="locator-list">
+          {locatorStores.map((s) => (
+            <article
+              class="locator-card"
+              data-store-id={s.id}
+              tabindex="0"
+              aria-label={s.name}
+            >
+              <div class="locator-no-photo">
+                <Icon name="storefront" />
+                <small lang="ar" dir="rtl">
+                  صورة المغازة غير متوفرة
+                </small>
+              </div>
+              <div class="locator-card-copy" dir="rtl">
+                <h3>
+                  <bdi>{s.name}</bdi>
+                </h3>
+                <p class="locator-city">
+                  <Icon name="map-pin" />
+                  <bdi>{s.city}</bdi>
+                  <span data-distance></span>
+                </p>
+                <p>
+                  <bdi>{s.address}</bdi>
+                </p>
+                <p class="locator-hours">
+                  <Icon name="clock" />
+                  <bdi>{s.hours || 'Horaires à confirmer'}</bdi>
+                </p>
+                <small>أوقات العمل خاصها التأكيد قبل الزيارة</small>
+                <div class="locator-card-actions">
+                  <a
+                    class="locator-route"
+                    href={s.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name="navigation-arrow" /> كيفاش نوصل
+                  </a>
+                  <a href={s.telephoneUrl}>
+                    <Icon name="phone" /> اتصل بالمغازة
+                  </a>
+                  <button data-store-detail={s.id}>تفاصيل أكثر</button>
+                </div>
+              </div>
+            </article>
+          ))}
+          <p id="locator-empty" hidden dir="rtl">
+            ما لقينا حتى مغازة بهاد البحث. جرّب مدينة أخرى أو مسح البحث.
+          </p>
+        </div>
+        <div class="locator-map-column">
+          <div
+            id="locator-map"
+            tabindex="0"
+            aria-label="Carte des magasins : repères de ville et positions GPS précises"
+          ></div>
+          <p id="locator-map-status" role="status" dir="rtl">
+            الخريطة كتعرض غير المغازات اللي عندها إحداثيات GPS مؤكدة. باقي
+            المغازات كاينة فاللائحة.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      id="preparer-visite"
+      class="container locator-visit"
+      aria-labelledby="visit-title"
+    >
+      <img
+        class="visit-decoration"
+        src="/images/stores/visit-decoration.webp"
+        alt=""
+        width="2172"
+        height="724"
+        loading="lazy"
+      />
+      <img
+        class="visit-decoration visit-decoration-right"
+        src="/images/stores/visit-decoration.webp"
+        alt=""
+        width="2172"
+        height="724"
+        loading="lazy"
+      />
+      <p class="visit-bubble" dir="rtl">
+        باغي تتأكد من توفر
+        <br />
+        <strong>موديل معين؟</strong>
+      </p>
+      <div class="visit-copy" dir="rtl">
+        <h2 id="visit-title">قبل ما تجي، حنا نعاونوك</h2>
+        <p>
+          تواصل معنا على واتساب وتأكد من توفر الموديل والمقاس اللي باغي تشوف
+          فالمغازة.
+        </p>
+        <button
+          class="button locator-whatsapp"
+          data-contact="Bonjour, je souhaite préparer ma visite et vérifier les modèles et dimensions exposés."
+        >
+          <Icon name="whatsapp-logo" /> تواصل على واتساب
+        </button>
+      </div>
+    </section>
+    <section class="container locator-help" dir="rtl">
+      <Icon name="headset" />
+      <div>
+        <h2>ما لقيتيش مغازة قريبة ليك؟</h2>
+        <p>تواصل مع فريقنا باش نلقاو ليك أفضل حل.</p>
+      </div>
+      <button
+        class="button secondary"
+        data-contact="Bonjour, je cherche un magasin près de chez moi."
+      >
+        <Icon name="phone" /> اتصل بنا
+      </button>
+    </section>
+  </main>
+  <Footer showBanner={false} />
+  <Dialogs />
+  <dialog
+    id="store-detail-dialog"
+    class="locator-dialog"
+    aria-labelledby="store-detail-title"
+  >
+    <button class="locator-close" aria-label="Fermer la fiche">
+      ×
+    </button>
+    <div id="store-detail-body" dir="rtl"></div>
+  </dialog>
+  <script>
+    import '../lib/store-locator';
+    import '../lib/store-hero';
+  </script>
+</Layout>

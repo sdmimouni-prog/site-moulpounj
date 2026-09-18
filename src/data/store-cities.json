@@ -1,0 +1,154 @@
+[
+  {
+    "city": "Agadir",
+    "label": "Agadir",
+    "latitude": 30.42018,
+    "longitude": -9.59815,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=Agadir&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2561668
+  },
+  {
+    "city": "Beni Mellal",
+    "label": "Béni Mellal",
+    "latitude": 32.33725,
+    "longitude": -6.34983,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=B%C3%A9ni+Mellal&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2555745
+  },
+  {
+    "city": "Casablanca",
+    "label": "Casablanca",
+    "latitude": 33.58831,
+    "longitude": -7.61138,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=Casablanca&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2553604
+  },
+  {
+    "city": "Deroua",
+    "label": "Ad Darwa",
+    "latitude": 33.37487,
+    "longitude": -7.5356,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=Deroua&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2552292
+  },
+  {
+    "city": "El Jadida",
+    "label": "El Jadida",
+    "latitude": 33.25682,
+    "longitude": -8.50882,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=El+Jadida&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2550078
+  },
+  {
+    "city": "Fes",
+    "label": "Fès",
+    "latitude": 34.03313,
+    "longitude": -5.00028,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=F%C3%A8s&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2548885
+  },
+  {
+    "city": "Had Soualem",
+    "label": "Had Soualem",
+    "latitude": 33.41972,
+    "longitude": -7.85237,
+    "precision": "city",
+    "source": "https://www.geodatos.net/en/coordinates/morocco/had-soualem"
+  },
+  {
+    "city": "Kenitra",
+    "label": "Kénitra",
+    "latitude": 34.26101,
+    "longitude": -6.5802,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=Kenitra&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2544571
+  },
+  {
+    "city": "Marrakech",
+    "label": "Marrakech",
+    "latitude": 31.63416,
+    "longitude": -7.99994,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=Marrakech&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2542997
+  },
+  {
+    "city": "Meknes",
+    "label": "Meknès",
+    "latitude": 33.89352,
+    "longitude": -5.54727,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=Mekn%C3%A8s&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2542715
+  },
+  {
+    "city": "Mohammedia",
+    "label": "Mohammédia",
+    "latitude": 33.68607,
+    "longitude": -7.38298,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=Mohammedia&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2542051
+  },
+  {
+    "city": "Safi",
+    "label": "Safi",
+    "latitude": 32.29939,
+    "longitude": -9.23718,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=Safi&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2537881
+  },
+  {
+    "city": "Sale",
+    "label": "Salé",
+    "latitude": 34.0531,
+    "longitude": -6.79846,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=Sal%C3%A9&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2537763
+  },
+  {
+    "city": "Tanger",
+    "label": "Tanger",
+    "latitude": 35.76727,
+    "longitude": -5.79975,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=Tanger&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2530335
+  },
+  {
+    "city": "Taza",
+    "label": "Taza",
+    "latitude": 34.21,
+    "longitude": -4.01,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=Taza&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2529317
+  },
+  {
+    "city": "Temara",
+    "label": "Temara",
+    "latitude": 33.92866,
+    "longitude": -6.90656,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=T%C3%A9mara&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2529013
+  },
+  {
+    "city": "Tetouan",
+    "label": "Tétouan",
+    "latitude": 35.57845,
+    "longitude": -5.36837,
+    "precision": "city",
+    "source": "https://geocoding-api.open-meteo.com/v1/search?name=T%C3%A9touan&count=10&language=fr&countryCode=MA",
+    "geonamesId": 2528910
+  }
+]
