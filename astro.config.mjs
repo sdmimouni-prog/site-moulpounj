@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   output: 'static',
+  site: 'https://site-moulpounj.vercel.app',
   devToolbar: { enabled: false },
   vite: {
     plugins: [tailwindcss()],
